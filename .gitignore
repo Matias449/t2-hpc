@@ -1,0 +1,40 @@
+# Binarios ejecutables de C++
+serial
+paralelo_b
+paralelo_c
+paralelo_c_cuadrantes
+serial_native
+serial_o3
+*.o
+*.obj
+*.exe
+*.out
+
+# Archivos temporales de Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.pytest_cache/
+.coverage
+htmlcov/
+
+# Entornos virtuales
+.venv/
+venv/
+env/
+ENV/
+
+# Archivos de sistema operativo y editores
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
