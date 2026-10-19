@@ -1,0 +1,10 @@
+{
+  "status": "passed",
+  "rows": 335,
+  "configurations": 67,
+  "repetitions_per_configuration": 5,
+  "checksums": "all passed",
+  "statistics": "recomputed and checked",
+  "figures": "four visually inspected",
+  "power_after_run": "Now drawing from 'Battery Power'\n -InternalBattery-0 (id=35061859)\t25%; discharging; (no estimate) present: true"
+}

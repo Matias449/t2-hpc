@@ -1,0 +1,42 @@
+{
+  "status": "ready",
+  "full_experiments_started": false,
+  "validation_checks": 103,
+  "max_abs_error": 1.4765966227514582e-14,
+  "plan_configurations": 67,
+  "measured_repetitions_per_configuration": 5,
+  "metrics_tests": "passed: two variants, ideal efficiency, weak efficiency, incomplete-run rejection",
+  "hardware": {
+    "system": "macOS-26.6.2-arm64-arm-64bit-Mach-O",
+    "architecture": "arm64",
+    "python": "3.13.13 (main, Apr  7 2026, 18:19:01) [Clang 21.0.0 (clang-2100.0.123.102)]",
+    "logical_cpus": 10,
+    "packages": {
+      "numpy": "2.5.4",
+      "numba": "0.68.0",
+      "llvmlite": "0.50.0",
+      "matplotlib": "3.11.2"
+    },
+    "sysctl": {
+      "hw.model": "Mac17,2",
+      "machdep.cpu.brand_string": "Apple M5",
+      "hw.physicalcpu": "10",
+      "hw.logicalcpu": "10",
+      "hw.memsize": "17179869184",
+      "hw.cpufrequency": null,
+      "hw.cpufrequency_max": null,
+      "hw.nperflevels": "2",
+      "hw.perflevel0.name": "Super",
+      "hw.perflevel0.physicalcpu": "4",
+      "hw.perflevel0.cpufrequency_max": null,
+      "hw.perflevel1.name": "Efficiency",
+      "hw.perflevel1.physicalcpu": "6",
+      "hw.perflevel1.cpufrequency_max": null
+    },
+    "power": "Now drawing from 'Battery Power'\n -InternalBattery-0 (id=35061859)\t35%; discharging; 2:10 remaining present: true",
+    "clock_note": "null significa que el sistema no expone la frecuencia; no es una medición del reloj"
+  },
+  "entry_point": "ejecutar.command",
+  "instructions": "LEEME_EJECUCION.md",
+  "last_smoke_test": "resultados/PRUEBA_20261019_143214_17156c"
+}

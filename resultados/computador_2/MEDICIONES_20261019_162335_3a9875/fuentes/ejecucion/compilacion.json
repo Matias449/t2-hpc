@@ -1,0 +1,85 @@
+{
+  "compiler": "Apple clang version 21.0.0 (clang-2100.1.1.101)\nTarget: arm64-apple-darwin25.6.0\nThread model: posix\nInstalledDir: /Library/Developer/CommandLineTools/usr/bin\n",
+  "commands": [
+    [
+      "/usr/bin/clang++",
+      "-O3",
+      "-mcpu=native",
+      "-std=c++17",
+      "-Xpreprocessor",
+      "-fopenmp",
+      "-I/opt/homebrew/opt/libomp/include",
+      "-L/opt/homebrew/opt/libomp/lib",
+      "-Wl,-rpath,/opt/homebrew/opt/libomp/lib",
+      "-lomp",
+      "-DALGORITHM=0",
+      "-I/Users/agustinchateau/Desktop/Computacion-de-Alto-Rendimient-2026-Oct-19_17-10-24-678/Tarea 2/Co\u0301digos",
+      "/Users/agustinchateau/Desktop/Computacion-de-Alto-Rendimient-2026-Oct-19_17-10-24-678/Tarea 2/ejecucion/benchmark.cpp",
+      "-o",
+      "/Users/agustinchateau/Desktop/Computacion-de-Alto-Rendimient-2026-Oct-19_17-10-24-678/Tarea 2/ejecucion/bin/serial"
+    ],
+    [
+      "/usr/bin/clang++",
+      "-O3",
+      "-mcpu=native",
+      "-std=c++17",
+      "-Xpreprocessor",
+      "-fopenmp",
+      "-I/opt/homebrew/opt/libomp/include",
+      "-L/opt/homebrew/opt/libomp/lib",
+      "-Wl,-rpath,/opt/homebrew/opt/libomp/lib",
+      "-lomp",
+      "-DALGORITHM=1",
+      "-I/Users/agustinchateau/Desktop/Computacion-de-Alto-Rendimient-2026-Oct-19_17-10-24-678/Tarea 2/Co\u0301digos",
+      "/Users/agustinchateau/Desktop/Computacion-de-Alto-Rendimient-2026-Oct-19_17-10-24-678/Tarea 2/ejecucion/benchmark.cpp",
+      "-o",
+      "/Users/agustinchateau/Desktop/Computacion-de-Alto-Rendimient-2026-Oct-19_17-10-24-678/Tarea 2/ejecucion/bin/datos"
+    ],
+    [
+      "/usr/bin/clang++",
+      "-O3",
+      "-mcpu=native",
+      "-std=c++17",
+      "-Xpreprocessor",
+      "-fopenmp",
+      "-I/opt/homebrew/opt/libomp/include",
+      "-L/opt/homebrew/opt/libomp/lib",
+      "-Wl,-rpath,/opt/homebrew/opt/libomp/lib",
+      "-lomp",
+      "-DALGORITHM=2",
+      "-I/Users/agustinchateau/Desktop/Computacion-de-Alto-Rendimient-2026-Oct-19_17-10-24-678/Tarea 2/Co\u0301digos",
+      "/Users/agustinchateau/Desktop/Computacion-de-Alto-Rendimient-2026-Oct-19_17-10-24-678/Tarea 2/ejecucion/benchmark.cpp",
+      "-o",
+      "/Users/agustinchateau/Desktop/Computacion-de-Alto-Rendimient-2026-Oct-19_17-10-24-678/Tarea 2/ejecucion/bin/tareas"
+    ],
+    [
+      "/usr/bin/clang++",
+      "-O3",
+      "-mcpu=native",
+      "-std=c++17",
+      "-Xpreprocessor",
+      "-fopenmp",
+      "-I/opt/homebrew/opt/libomp/include",
+      "-L/opt/homebrew/opt/libomp/lib",
+      "-Wl,-rpath,/opt/homebrew/opt/libomp/lib",
+      "-lomp",
+      "-DALGORITHM=3",
+      "-I/Users/agustinchateau/Desktop/Computacion-de-Alto-Rendimient-2026-Oct-19_17-10-24-678/Tarea 2/Co\u0301digos",
+      "/Users/agustinchateau/Desktop/Computacion-de-Alto-Rendimient-2026-Oct-19_17-10-24-678/Tarea 2/ejecucion/benchmark.cpp",
+      "-o",
+      "/Users/agustinchateau/Desktop/Computacion-de-Alto-Rendimient-2026-Oct-19_17-10-24-678/Tarea 2/ejecucion/bin/cuadrantes"
+    ]
+  ],
+  "sources": {
+    "ejecucion/benchmark.cpp": "199d8e3d5eefac70c828ef4d311373628ffc8a37027ee1f288a238ac0bececd9",
+    "Co\u0301digos/paralelo_c.cpp": "793bfa2b6d99f8086dd90231cb833ce6d45b1d909802b1b51c61fadd5bf4fd9a",
+    "Co\u0301digos/serial.cpp": "6cae1df4844a262cfc78ea3bed49c616a7e8b6c10ae947a367e3a164d3a0be17",
+    "Co\u0301digos/paralelo_c_cuadrantes.cpp": "0f019a3bd2fa3b447bf7ac235893ec22c0e1e4ab14942cfe153d4ca4d0725179"
+  },
+  "binaries": {
+    "serial": "5e428e280613229fd40693e5e54d3d8a3d57e1afe5d2a49f2dced3a6fdd72f41",
+    "datos": "595219a37b7cd093ed2116ab8edb7927226140f3b1715ae5d8218a567baf2b80",
+    "tareas": "0c2c4b84154d40e064d9f64109da4090bd06c44b37be8a3757fe47e02537d793",
+    "cuadrantes": "44659de17de8c40c64685866d5cff9e75858c22b8a6580c1b95ad8c8ab5db5ca"
+  }
+}

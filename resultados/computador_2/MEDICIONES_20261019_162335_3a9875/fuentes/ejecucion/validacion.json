@@ -1,0 +1,728 @@
+{
+  "date": "2026-10-19T17:32:15.210136+00:00",
+  "status": "passed",
+  "scope": "Matrices peque\u00f1as completas; no son benchmarks de entrega",
+  "checks": [
+    {
+      "algorithm": "serial",
+      "N": 1,
+      "n": 1,
+      "p": 1,
+      "max_abs_error": 0.0
+    },
+    {
+      "algorithm": "datos",
+      "N": 1,
+      "n": 1,
+      "p": 1,
+      "max_abs_error": 0.0
+    },
+    {
+      "algorithm": "datos",
+      "N": 1,
+      "n": 1,
+      "p": 2,
+      "max_abs_error": 0.0
+    },
+    {
+      "algorithm": "datos",
+      "N": 1,
+      "n": 1,
+      "p": 4,
+      "max_abs_error": 0.0
+    },
+    {
+      "algorithm": "datos",
+      "N": 1,
+      "n": 1,
+      "p": 8,
+      "max_abs_error": 0.0
+    },
+    {
+      "algorithm": "tareas",
+      "N": 1,
+      "n": 1,
+      "p": 1,
+      "max_abs_error": 0.0
+    },
+    {
+      "algorithm": "tareas",
+      "N": 1,
+      "n": 1,
+      "p": 2,
+      "max_abs_error": 0.0
+    },
+    {
+      "algorithm": "tareas",
+      "N": 1,
+      "n": 1,
+      "p": 4,
+      "max_abs_error": 0.0
+    },
+    {
+      "algorithm": "tareas",
+      "N": 1,
+      "n": 1,
+      "p": 8,
+      "max_abs_error": 0.0
+    },
+    {
+      "algorithm": "cuadrantes",
+      "N": 1,
+      "n": 1,
+      "p": 1,
+      "max_abs_error": 0.0
+    },
+    {
+      "algorithm": "cuadrantes",
+      "N": 1,
+      "n": 1,
+      "p": 2,
+      "max_abs_error": 0.0
+    },
+    {
+      "algorithm": "cuadrantes",
+      "N": 1,
+      "n": 1,
+      "p": 4,
+      "max_abs_error": 0.0
+    },
+    {
+      "algorithm": "cuadrantes",
+      "N": 1,
+      "n": 1,
+      "p": 8,
+      "max_abs_error": 0.0
+    },
+    {
+      "algorithm": "numba",
+      "N": 1,
+      "n": 1,
+      "p": 1,
+      "max_abs_error": 0.0
+    },
+    {
+      "algorithm": "numba",
+      "N": 1,
+      "n": 1,
+      "p": 2,
+      "max_abs_error": 0.0
+    },
+    {
+      "algorithm": "numba",
+      "N": 1,
+      "n": 1,
+      "p": 4,
+      "max_abs_error": 0.0
+    },
+    {
+      "algorithm": "numba",
+      "N": 1,
+      "n": 1,
+      "p": 8,
+      "max_abs_error": 0.0
+    },
+    {
+      "algorithm": "serial",
+      "N": 16,
+      "n": 1,
+      "p": 1,
+      "max_abs_error": 1.7763568394002505e-15
+    },
+    {
+      "algorithm": "serial",
+      "N": 16,
+      "n": 4,
+      "p": 1,
+      "max_abs_error": 1.7763568394002505e-15
+    },
+    {
+      "algorithm": "serial",
+      "N": 16,
+      "n": 16,
+      "p": 1,
+      "max_abs_error": 1.7763568394002505e-15
+    },
+    {
+      "algorithm": "datos",
+      "N": 16,
+      "n": 1,
+      "p": 1,
+      "max_abs_error": 1.7763568394002505e-15
+    },
+    {
+      "algorithm": "datos",
+      "N": 16,
+      "n": 1,
+      "p": 2,
+      "max_abs_error": 1.7763568394002505e-15
+    },
+    {
+      "algorithm": "datos",
+      "N": 16,
+      "n": 1,
+      "p": 4,
+      "max_abs_error": 1.7763568394002505e-15
+    },
+    {
+      "algorithm": "datos",
+      "N": 16,
+      "n": 1,
+      "p": 8,
+      "max_abs_error": 1.7763568394002505e-15
+    },
+    {
+      "algorithm": "datos",
+      "N": 16,
+      "n": 4,
+      "p": 1,
+      "max_abs_error": 1.7763568394002505e-15
+    },
+    {
+      "algorithm": "datos",
+      "N": 16,
+      "n": 4,
+      "p": 2,
+      "max_abs_error": 1.7763568394002505e-15
+    },
+    {
+      "algorithm": "datos",
+      "N": 16,
+      "n": 4,
+      "p": 4,
+      "max_abs_error": 1.7763568394002505e-15
+    },
+    {
+      "algorithm": "datos",
+      "N": 16,
+      "n": 4,
+      "p": 8,
+      "max_abs_error": 1.7763568394002505e-15
+    },
+    {
+      "algorithm": "datos",
+      "N": 16,
+      "n": 16,
+      "p": 1,
+      "max_abs_error": 1.7763568394002505e-15
+    },
+    {
+      "algorithm": "datos",
+      "N": 16,
+      "n": 16,
+      "p": 2,
+      "max_abs_error": 1.7763568394002505e-15
+    },
+    {
+      "algorithm": "datos",
+      "N": 16,
+      "n": 16,
+      "p": 4,
+      "max_abs_error": 1.7763568394002505e-15
+    },
+    {
+      "algorithm": "datos",
+      "N": 16,
+      "n": 16,
+      "p": 8,
+      "max_abs_error": 1.7763568394002505e-15
+    },
+    {
+      "algorithm": "tareas",
+      "N": 16,
+      "n": 1,
+      "p": 1,
+      "max_abs_error": 1.7763568394002505e-15
+    },
+    {
+      "algorithm": "tareas",
+      "N": 16,
+      "n": 1,
+      "p": 2,
+      "max_abs_error": 1.7763568394002505e-15
+    },
+    {
+      "algorithm": "tareas",
+      "N": 16,
+      "n": 1,
+      "p": 4,
+      "max_abs_error": 1.7763568394002505e-15
+    },
+    {
+      "algorithm": "tareas",
+      "N": 16,
+      "n": 1,
+      "p": 8,
+      "max_abs_error": 1.7763568394002505e-15
+    },
+    {
+      "algorithm": "tareas",
+      "N": 16,
+      "n": 4,
+      "p": 1,
+      "max_abs_error": 1.7763568394002505e-15
+    },
+    {
+      "algorithm": "tareas",
+      "N": 16,
+      "n": 4,
+      "p": 2,
+      "max_abs_error": 1.7763568394002505e-15
+    },
+    {
+      "algorithm": "tareas",
+      "N": 16,
+      "n": 4,
+      "p": 4,
+      "max_abs_error": 1.7763568394002505e-15
+    },
+    {
+      "algorithm": "tareas",
+      "N": 16,
+      "n": 4,
+      "p": 8,
+      "max_abs_error": 1.7763568394002505e-15
+    },
+    {
+      "algorithm": "tareas",
+      "N": 16,
+      "n": 16,
+      "p": 1,
+      "max_abs_error": 1.7763568394002505e-15
+    },
+    {
+      "algorithm": "tareas",
+      "N": 16,
+      "n": 16,
+      "p": 2,
+      "max_abs_error": 1.7763568394002505e-15
+    },
+    {
+      "algorithm": "tareas",
+      "N": 16,
+      "n": 16,
+      "p": 4,
+      "max_abs_error": 1.7763568394002505e-15
+    },
+    {
+      "algorithm": "tareas",
+      "N": 16,
+      "n": 16,
+      "p": 8,
+      "max_abs_error": 1.7763568394002505e-15
+    },
+    {
+      "algorithm": "cuadrantes",
+      "N": 16,
+      "n": 1,
+      "p": 1,
+      "max_abs_error": 1.7763568394002505e-15
+    },
+    {
+      "algorithm": "cuadrantes",
+      "N": 16,
+      "n": 1,
+      "p": 2,
+      "max_abs_error": 1.7763568394002505e-15
+    },
+    {
+      "algorithm": "cuadrantes",
+      "N": 16,
+      "n": 1,
+      "p": 4,
+      "max_abs_error": 1.7763568394002505e-15
+    },
+    {
+      "algorithm": "cuadrantes",
+      "N": 16,
+      "n": 1,
+      "p": 8,
+      "max_abs_error": 1.7763568394002505e-15
+    },
+    {
+      "algorithm": "cuadrantes",
+      "N": 16,
+      "n": 4,
+      "p": 1,
+      "max_abs_error": 1.7763568394002505e-15
+    },
+    {
+      "algorithm": "cuadrantes",
+      "N": 16,
+      "n": 4,
+      "p": 2,
+      "max_abs_error": 1.7763568394002505e-15
+    },
+    {
+      "algorithm": "cuadrantes",
+      "N": 16,
+      "n": 4,
+      "p": 4,
+      "max_abs_error": 1.7763568394002505e-15
+    },
+    {
+      "algorithm": "cuadrantes",
+      "N": 16,
+      "n": 4,
+      "p": 8,
+      "max_abs_error": 1.7763568394002505e-15
+    },
+    {
+      "algorithm": "cuadrantes",
+      "N": 16,
+      "n": 16,
+      "p": 1,
+      "max_abs_error": 1.7763568394002505e-15
+    },
+    {
+      "algorithm": "cuadrantes",
+      "N": 16,
+      "n": 16,
+      "p": 2,
+      "max_abs_error": 1.7763568394002505e-15
+    },
+    {
+      "algorithm": "cuadrantes",
+      "N": 16,
+      "n": 16,
+      "p": 4,
+      "max_abs_error": 1.7763568394002505e-15
+    },
+    {
+      "algorithm": "cuadrantes",
+      "N": 16,
+      "n": 16,
+      "p": 8,
+      "max_abs_error": 1.7763568394002505e-15
+    },
+    {
+      "algorithm": "numba",
+      "N": 16,
+      "n": 16,
+      "p": 1,
+      "max_abs_error": 8.881784197001252e-16
+    },
+    {
+      "algorithm": "numba",
+      "N": 16,
+      "n": 16,
+      "p": 2,
+      "max_abs_error": 8.881784197001252e-16
+    },
+    {
+      "algorithm": "numba",
+      "N": 16,
+      "n": 16,
+      "p": 4,
+      "max_abs_error": 8.881784197001252e-16
+    },
+    {
+      "algorithm": "numba",
+      "N": 16,
+      "n": 16,
+      "p": 8,
+      "max_abs_error": 8.881784197001252e-16
+    },
+    {
+      "algorithm": "serial",
+      "N": 64,
+      "n": 1,
+      "p": 1,
+      "max_abs_error": 1.4765966227514582e-14
+    },
+    {
+      "algorithm": "serial",
+      "N": 64,
+      "n": 16,
+      "p": 1,
+      "max_abs_error": 1.4765966227514582e-14
+    },
+    {
+      "algorithm": "serial",
+      "N": 64,
+      "n": 64,
+      "p": 1,
+      "max_abs_error": 1.4765966227514582e-14
+    },
+    {
+      "algorithm": "datos",
+      "N": 64,
+      "n": 1,
+      "p": 1,
+      "max_abs_error": 1.4765966227514582e-14
+    },
+    {
+      "algorithm": "datos",
+      "N": 64,
+      "n": 1,
+      "p": 2,
+      "max_abs_error": 1.4765966227514582e-14
+    },
+    {
+      "algorithm": "datos",
+      "N": 64,
+      "n": 1,
+      "p": 4,
+      "max_abs_error": 1.4765966227514582e-14
+    },
+    {
+      "algorithm": "datos",
+      "N": 64,
+      "n": 1,
+      "p": 8,
+      "max_abs_error": 1.4765966227514582e-14
+    },
+    {
+      "algorithm": "datos",
+      "N": 64,
+      "n": 16,
+      "p": 1,
+      "max_abs_error": 1.4765966227514582e-14
+    },
+    {
+      "algorithm": "datos",
+      "N": 64,
+      "n": 16,
+      "p": 2,
+      "max_abs_error": 1.4765966227514582e-14
+    },
+    {
+      "algorithm": "datos",
+      "N": 64,
+      "n": 16,
+      "p": 4,
+      "max_abs_error": 1.4765966227514582e-14
+    },
+    {
+      "algorithm": "datos",
+      "N": 64,
+      "n": 16,
+      "p": 8,
+      "max_abs_error": 1.4765966227514582e-14
+    },
+    {
+      "algorithm": "datos",
+      "N": 64,
+      "n": 64,
+      "p": 1,
+      "max_abs_error": 1.4765966227514582e-14
+    },
+    {
+      "algorithm": "datos",
+      "N": 64,
+      "n": 64,
+      "p": 2,
+      "max_abs_error": 1.4765966227514582e-14
+    },
+    {
+      "algorithm": "datos",
+      "N": 64,
+      "n": 64,
+      "p": 4,
+      "max_abs_error": 1.4765966227514582e-14
+    },
+    {
+      "algorithm": "datos",
+      "N": 64,
+      "n": 64,
+      "p": 8,
+      "max_abs_error": 1.4765966227514582e-14
+    },
+    {
+      "algorithm": "tareas",
+      "N": 64,
+      "n": 1,
+      "p": 1,
+      "max_abs_error": 1.4765966227514582e-14
+    },
+    {
+      "algorithm": "tareas",
+      "N": 64,
+      "n": 1,
+      "p": 2,
+      "max_abs_error": 1.4765966227514582e-14
+    },
+    {
+      "algorithm": "tareas",
+      "N": 64,
+      "n": 1,
+      "p": 4,
+      "max_abs_error": 1.4765966227514582e-14
+    },
+    {
+      "algorithm": "tareas",
+      "N": 64,
+      "n": 1,
+      "p": 8,
+      "max_abs_error": 1.4765966227514582e-14
+    },
+    {
+      "algorithm": "tareas",
+      "N": 64,
+      "n": 16,
+      "p": 1,
+      "max_abs_error": 1.4765966227514582e-14
+    },
+    {
+      "algorithm": "tareas",
+      "N": 64,
+      "n": 16,
+      "p": 2,
+      "max_abs_error": 1.4765966227514582e-14
+    },
+    {
+      "algorithm": "tareas",
+      "N": 64,
+      "n": 16,
+      "p": 4,
+      "max_abs_error": 1.4765966227514582e-14
+    },
+    {
+      "algorithm": "tareas",
+      "N": 64,
+      "n": 16,
+      "p": 8,
+      "max_abs_error": 1.4765966227514582e-14
+    },
+    {
+      "algorithm": "tareas",
+      "N": 64,
+      "n": 64,
+      "p": 1,
+      "max_abs_error": 1.4765966227514582e-14
+    },
+    {
+      "algorithm": "tareas",
+      "N": 64,
+      "n": 64,
+      "p": 2,
+      "max_abs_error": 1.4765966227514582e-14
+    },
+    {
+      "algorithm": "tareas",
+      "N": 64,
+      "n": 64,
+      "p": 4,
+      "max_abs_error": 1.4765966227514582e-14
+    },
+    {
+      "algorithm": "tareas",
+      "N": 64,
+      "n": 64,
+      "p": 8,
+      "max_abs_error": 1.4765966227514582e-14
+    },
+    {
+      "algorithm": "cuadrantes",
+      "N": 64,
+      "n": 1,
+      "p": 1,
+      "max_abs_error": 1.4765966227514582e-14
+    },
+    {
+      "algorithm": "cuadrantes",
+      "N": 64,
+      "n": 1,
+      "p": 2,
+      "max_abs_error": 1.4765966227514582e-14
+    },
+    {
+      "algorithm": "cuadrantes",
+      "N": 64,
+      "n": 1,
+      "p": 4,
+      "max_abs_error": 1.4765966227514582e-14
+    },
+    {
+      "algorithm": "cuadrantes",
+      "N": 64,
+      "n": 1,
+      "p": 8,
+      "max_abs_error": 1.4765966227514582e-14
+    },
+    {
+      "algorithm": "cuadrantes",
+      "N": 64,
+      "n": 16,
+      "p": 1,
+      "max_abs_error": 1.4765966227514582e-14
+    },
+    {
+      "algorithm": "cuadrantes",
+      "N": 64,
+      "n": 16,
+      "p": 2,
+      "max_abs_error": 1.4765966227514582e-14
+    },
+    {
+      "algorithm": "cuadrantes",
+      "N": 64,
+      "n": 16,
+      "p": 4,
+      "max_abs_error": 1.4765966227514582e-14
+    },
+    {
+      "algorithm": "cuadrantes",
+      "N": 64,
+      "n": 16,
+      "p": 8,
+      "max_abs_error": 1.4765966227514582e-14
+    },
+    {
+      "algorithm": "cuadrantes",
+      "N": 64,
+      "n": 64,
+      "p": 1,
+      "max_abs_error": 1.4765966227514582e-14
+    },
+    {
+      "algorithm": "cuadrantes",
+      "N": 64,
+      "n": 64,
+      "p": 2,
+      "max_abs_error": 1.4765966227514582e-14
+    },
+    {
+      "algorithm": "cuadrantes",
+      "N": 64,
+      "n": 64,
+      "p": 4,
+      "max_abs_error": 1.4765966227514582e-14
+    },
+    {
+      "algorithm": "cuadrantes",
+      "N": 64,
+      "n": 64,
+      "p": 8,
+      "max_abs_error": 1.4765966227514582e-14
+    },
+    {
+      "algorithm": "numba",
+      "N": 64,
+      "n": 64,
+      "p": 1,
+      "max_abs_error": 4.385380947269368e-15
+    },
+    {
+      "algorithm": "numba",
+      "N": 64,
+      "n": 64,
+      "p": 2,
+      "max_abs_error": 4.385380947269368e-15
+    },
+    {
+      "algorithm": "numba",
+      "N": 64,
+      "n": 64,
+      "p": 4,
+      "max_abs_error": 4.385380947269368e-15
+    },
+    {
+      "algorithm": "numba",
+      "N": 64,
+      "n": 64,
+      "p": 8,
+      "max_abs_error": 4.385380947269368e-15
+    }
+  ]
+}

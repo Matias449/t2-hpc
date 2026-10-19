@@ -1,0 +1,469 @@
+[1/67] serial N=2048 n=2048 p=1
+["/Users/agustinchateau/Desktop/Computacion-de-Alto-Rendimient-2026-Oct-19_17-10-24-678/Tarea 2/ejecucion/bin/serial", "2048", "2048", "1", "5"]
+{"rep":1,"ms":1097.9077090000001,"checksum":172.33162744483667,"threads":1}
+{"rep":2,"ms":1007.605958,"checksum":172.33162744483667,"threads":1}
+{"rep":3,"ms":1105.344875,"checksum":172.33162744483667,"threads":1}
+{"rep":4,"ms":1052.7599580000001,"checksum":172.33162744483667,"threads":1}
+{"rep":5,"ms":983.66333399999996,"checksum":172.33162744483667,"threads":1}
+[2/67] serial N=2048 n=1024 p=1
+["/Users/agustinchateau/Desktop/Computacion-de-Alto-Rendimient-2026-Oct-19_17-10-24-678/Tarea 2/ejecucion/bin/serial", "2048", "1024", "1", "5"]
+{"rep":1,"ms":1105.521041,"checksum":172.33162744483667,"threads":1}
+{"rep":2,"ms":1178.4775,"checksum":172.33162744483667,"threads":1}
+{"rep":3,"ms":1121.347417,"checksum":172.33162744483667,"threads":1}
+{"rep":4,"ms":1090.5276249999999,"checksum":172.33162744483667,"threads":1}
+{"rep":5,"ms":1090.0895840000001,"checksum":172.33162744483667,"threads":1}
+[3/67] serial N=2048 n=512 p=1
+["/Users/agustinchateau/Desktop/Computacion-de-Alto-Rendimient-2026-Oct-19_17-10-24-678/Tarea 2/ejecucion/bin/serial", "2048", "512", "1", "5"]
+{"rep":1,"ms":1122.849541,"checksum":172.33162744483667,"threads":1}
+{"rep":2,"ms":1224.3782080000001,"checksum":172.33162744483667,"threads":1}
+{"rep":3,"ms":1108.407375,"checksum":172.33162744483667,"threads":1}
+{"rep":4,"ms":1071.6595,"checksum":172.33162744483667,"threads":1}
+{"rep":5,"ms":1093.807041,"checksum":172.33162744483667,"threads":1}
+[4/67] serial N=2048 n=256 p=1
+["/Users/agustinchateau/Desktop/Computacion-de-Alto-Rendimient-2026-Oct-19_17-10-24-678/Tarea 2/ejecucion/bin/serial", "2048", "256", "1", "5"]
+{"rep":1,"ms":1247.8021249999999,"checksum":172.33162744483667,"threads":1}
+{"rep":2,"ms":1243.165667,"checksum":172.33162744483667,"threads":1}
+{"rep":3,"ms":1225.43875,"checksum":172.33162744483667,"threads":1}
+{"rep":4,"ms":1226.4016670000001,"checksum":172.33162744483667,"threads":1}
+{"rep":5,"ms":1226.1960409999999,"checksum":172.33162744483667,"threads":1}
+[5/67] serial N=2048 n=128 p=1
+["/Users/agustinchateau/Desktop/Computacion-de-Alto-Rendimient-2026-Oct-19_17-10-24-678/Tarea 2/ejecucion/bin/serial", "2048", "128", "1", "5"]
+{"rep":1,"ms":1246.107833,"checksum":172.33162744483667,"threads":1}
+{"rep":2,"ms":1249.586708,"checksum":172.33162744483667,"threads":1}
+{"rep":3,"ms":1250.365875,"checksum":172.33162744483667,"threads":1}
+{"rep":4,"ms":1247.4239170000001,"checksum":172.33162744483667,"threads":1}
+{"rep":5,"ms":1249.028333,"checksum":172.33162744483667,"threads":1}
+[6/67] serial N=2048 n=64 p=1
+["/Users/agustinchateau/Desktop/Computacion-de-Alto-Rendimient-2026-Oct-19_17-10-24-678/Tarea 2/ejecucion/bin/serial", "2048", "64", "1", "5"]
+{"rep":1,"ms":1543.939083,"checksum":172.33162744483667,"threads":1}
+{"rep":2,"ms":1543.050667,"checksum":172.33162744483667,"threads":1}
+{"rep":3,"ms":1543.698625,"checksum":172.33162744483667,"threads":1}
+{"rep":4,"ms":1545.991542,"checksum":172.33162744483667,"threads":1}
+{"rep":5,"ms":1543.560667,"checksum":172.33162744483667,"threads":1}
+[7/67] serial N=2048 n=32 p=1
+["/Users/agustinchateau/Desktop/Computacion-de-Alto-Rendimient-2026-Oct-19_17-10-24-678/Tarea 2/ejecucion/bin/serial", "2048", "32", "1", "5"]
+{"rep":1,"ms":2176.530542,"checksum":172.33162744483667,"threads":1}
+{"rep":2,"ms":2174.2142920000001,"checksum":172.33162744483667,"threads":1}
+{"rep":3,"ms":2182.7031670000001,"checksum":172.33162744483667,"threads":1}
+{"rep":4,"ms":2175.4725830000002,"checksum":172.33162744483667,"threads":1}
+{"rep":5,"ms":2181.205125,"checksum":172.33162744483667,"threads":1}
+[8/67] datos N=1024 n=1024 p=1
+["/Users/agustinchateau/Desktop/Computacion-de-Alto-Rendimient-2026-Oct-19_17-10-24-678/Tarea 2/ejecucion/bin/datos", "1024", "1024", "1", "5"]
+{"rep":1,"ms":119.562916,"checksum":52.223927352048804,"threads":1}
+{"rep":2,"ms":137.18837500000001,"checksum":52.223927352048804,"threads":1}
+{"rep":3,"ms":122.341458,"checksum":52.223927352048804,"threads":1}
+{"rep":4,"ms":120.39275000000001,"checksum":52.223927352048804,"threads":1}
+{"rep":5,"ms":120.022041,"checksum":52.223927352048804,"threads":1}
+[9/67] datos N=1024 n=1024 p=2
+["/Users/agustinchateau/Desktop/Computacion-de-Alto-Rendimient-2026-Oct-19_17-10-24-678/Tarea 2/ejecucion/bin/datos", "1024", "1024", "2", "5"]
+{"rep":1,"ms":60.395083999999997,"checksum":52.223927352048804,"threads":2}
+{"rep":2,"ms":62.465249999999997,"checksum":52.223927352048804,"threads":2}
+{"rep":3,"ms":62.587874999999997,"checksum":52.223927352048804,"threads":2}
+{"rep":4,"ms":63.824790999999998,"checksum":52.223927352048804,"threads":2}
+{"rep":5,"ms":61.884875000000001,"checksum":52.223927352048804,"threads":2}
+[10/67] datos N=1024 n=1024 p=4
+["/Users/agustinchateau/Desktop/Computacion-de-Alto-Rendimient-2026-Oct-19_17-10-24-678/Tarea 2/ejecucion/bin/datos", "1024", "1024", "4", "5"]
+{"rep":1,"ms":37.422750000000001,"checksum":52.223927352048804,"threads":4}
+{"rep":2,"ms":35.685291999999997,"checksum":52.223927352048804,"threads":4}
+{"rep":3,"ms":38.480333000000002,"checksum":52.223927352048804,"threads":4}
+{"rep":4,"ms":33.995792000000002,"checksum":52.223927352048804,"threads":4}
+{"rep":5,"ms":37.565416999999997,"checksum":52.223927352048804,"threads":4}
+[11/67] datos N=1024 n=1024 p=8
+["/Users/agustinchateau/Desktop/Computacion-de-Alto-Rendimient-2026-Oct-19_17-10-24-678/Tarea 2/ejecucion/bin/datos", "1024", "1024", "8", "5"]
+{"rep":1,"ms":30.319500000000001,"checksum":52.223927352048804,"threads":8}
+{"rep":2,"ms":29.194583000000002,"checksum":52.223927352048804,"threads":8}
+{"rep":3,"ms":26.968416000000001,"checksum":52.223927352048804,"threads":8}
+{"rep":4,"ms":31.045791999999999,"checksum":52.223927352048804,"threads":8}
+{"rep":5,"ms":26.574667000000002,"checksum":52.223927352048804,"threads":8}
+[12/67] cuadrantes N=1024 n=64 p=1
+["/Users/agustinchateau/Desktop/Computacion-de-Alto-Rendimient-2026-Oct-19_17-10-24-678/Tarea 2/ejecucion/bin/cuadrantes", "1024", "64", "1", "5"]
+{"rep":1,"ms":184.84975,"checksum":52.223927352048804,"threads":1}
+{"rep":2,"ms":180.44566699999999,"checksum":52.223927352048804,"threads":1}
+{"rep":3,"ms":180.642584,"checksum":52.223927352048804,"threads":1}
+{"rep":4,"ms":180.83712499999999,"checksum":52.223927352048804,"threads":1}
+{"rep":5,"ms":181.25550000000001,"checksum":52.223927352048804,"threads":1}
+[13/67] cuadrantes N=1024 n=64 p=2
+["/Users/agustinchateau/Desktop/Computacion-de-Alto-Rendimient-2026-Oct-19_17-10-24-678/Tarea 2/ejecucion/bin/cuadrantes", "1024", "64", "2", "5"]
+{"rep":1,"ms":91.364541000000003,"checksum":52.223927352048804,"threads":2}
+{"rep":2,"ms":92.290333000000004,"checksum":52.223927352048804,"threads":2}
+{"rep":3,"ms":91.869917000000001,"checksum":52.223927352048804,"threads":2}
+{"rep":4,"ms":92.718208000000004,"checksum":52.223927352048804,"threads":2}
+{"rep":5,"ms":91.501499999999993,"checksum":52.223927352048804,"threads":2}
+[14/67] cuadrantes N=1024 n=64 p=4
+["/Users/agustinchateau/Desktop/Computacion-de-Alto-Rendimient-2026-Oct-19_17-10-24-678/Tarea 2/ejecucion/bin/cuadrantes", "1024", "64", "4", "5"]
+{"rep":1,"ms":48.788708,"checksum":52.223927352048804,"threads":4}
+{"rep":2,"ms":47.34075,"checksum":52.223927352048804,"threads":4}
+{"rep":3,"ms":52.230459000000003,"checksum":52.223927352048804,"threads":4}
+{"rep":4,"ms":46.466292000000003,"checksum":52.223927352048804,"threads":4}
+{"rep":5,"ms":50.396000000000001,"checksum":52.223927352048804,"threads":4}
+[15/67] cuadrantes N=1024 n=64 p=8
+["/Users/agustinchateau/Desktop/Computacion-de-Alto-Rendimient-2026-Oct-19_17-10-24-678/Tarea 2/ejecucion/bin/cuadrantes", "1024", "64", "8", "5"]
+{"rep":1,"ms":47.401791000000003,"checksum":52.223927352048804,"threads":8}
+{"rep":2,"ms":48.224333000000001,"checksum":52.223927352048804,"threads":8}
+{"rep":3,"ms":53.955790999999998,"checksum":52.223927352048804,"threads":8}
+{"rep":4,"ms":48.026167000000001,"checksum":52.223927352048804,"threads":8}
+{"rep":5,"ms":51.307583000000001,"checksum":52.223927352048804,"threads":8}
+[16/67] numba N=1024 n=1024 p=1
+["/Users/agustinchateau/Desktop/Computacion-de-Alto-Rendimient-2026-Oct-19_17-10-24-678/Tarea 2/.venv/bin/python", "/Users/agustinchateau/Desktop/Computacion-de-Alto-Rendimient-2026-Oct-19_17-10-24-678/Tarea 2/ejecucion/numba_kernel.py", "1024", "1024", "1", "5"]
+{"rep": 1, "ms": 120.27445796411484, "checksum": 52.223927352029065, "threads": 1}
+{"rep": 2, "ms": 120.24050008039922, "checksum": 52.223927352029065, "threads": 1}
+{"rep": 3, "ms": 120.98991696257144, "checksum": 52.223927352029065, "threads": 1}
+{"rep": 4, "ms": 120.82795798778534, "checksum": 52.223927352029065, "threads": 1}
+{"rep": 5, "ms": 121.56520900316536, "checksum": 52.223927352029065, "threads": 1}
+[17/67] numba N=1024 n=1024 p=2
+["/Users/agustinchateau/Desktop/Computacion-de-Alto-Rendimient-2026-Oct-19_17-10-24-678/Tarea 2/.venv/bin/python", "/Users/agustinchateau/Desktop/Computacion-de-Alto-Rendimient-2026-Oct-19_17-10-24-678/Tarea 2/ejecucion/numba_kernel.py", "1024", "1024", "2", "5"]
+{"rep": 1, "ms": 61.25949998386204, "checksum": 52.223927352029065, "threads": 2}
+{"rep": 2, "ms": 84.76633299142122, "checksum": 52.223927352029065, "threads": 2}
+{"rep": 3, "ms": 61.45783304236829, "checksum": 52.223927352029065, "threads": 2}
+{"rep": 4, "ms": 61.00304098799825, "checksum": 52.223927352029065, "threads": 2}
+{"rep": 5, "ms": 61.613583005964756, "checksum": 52.223927352029065, "threads": 2}
+[18/67] numba N=1024 n=1024 p=4
+["/Users/agustinchateau/Desktop/Computacion-de-Alto-Rendimient-2026-Oct-19_17-10-24-678/Tarea 2/.venv/bin/python", "/Users/agustinchateau/Desktop/Computacion-de-Alto-Rendimient-2026-Oct-19_17-10-24-678/Tarea 2/ejecucion/numba_kernel.py", "1024", "1024", "4", "5"]
+{"rep": 1, "ms": 36.04362497571856, "checksum": 52.223927352029065, "threads": 4}
+{"rep": 2, "ms": 35.705083049833775, "checksum": 52.223927352029065, "threads": 4}
+{"rep": 3, "ms": 39.71420892048627, "checksum": 52.223927352029065, "threads": 4}
+{"rep": 4, "ms": 35.09637503884733, "checksum": 52.223927352029065, "threads": 4}
+{"rep": 5, "ms": 41.435083956457675, "checksum": 52.223927352029065, "threads": 4}
+[19/67] numba N=1024 n=1024 p=8
+["/Users/agustinchateau/Desktop/Computacion-de-Alto-Rendimient-2026-Oct-19_17-10-24-678/Tarea 2/.venv/bin/python", "/Users/agustinchateau/Desktop/Computacion-de-Alto-Rendimient-2026-Oct-19_17-10-24-678/Tarea 2/ejecucion/numba_kernel.py", "1024", "1024", "8", "5"]
+{"rep": 1, "ms": 26.09929209575057, "checksum": 52.223927352029065, "threads": 8}
+{"rep": 2, "ms": 29.553917003795505, "checksum": 52.223927352029065, "threads": 8}
+{"rep": 3, "ms": 27.570709004066885, "checksum": 52.223927352029065, "threads": 8}
+{"rep": 4, "ms": 28.283832943998277, "checksum": 52.223927352029065, "threads": 8}
+{"rep": 5, "ms": 28.538416954688728, "checksum": 52.223927352029065, "threads": 8}
+[20/67] datos N=2048 n=2048 p=1
+["/Users/agustinchateau/Desktop/Computacion-de-Alto-Rendimient-2026-Oct-19_17-10-24-678/Tarea 2/ejecucion/bin/datos", "2048", "2048", "1", "5"]
+{"rep":1,"ms":968.015625,"checksum":172.33162744483667,"threads":1}
+{"rep":2,"ms":970.93033300000002,"checksum":172.33162744483667,"threads":1}
+{"rep":3,"ms":967.10400000000004,"checksum":172.33162744483667,"threads":1}
+{"rep":4,"ms":963.59254199999998,"checksum":172.33162744483667,"threads":1}
+{"rep":5,"ms":982.79525000000001,"checksum":172.33162744483667,"threads":1}
+[21/67] datos N=2048 n=2048 p=2
+["/Users/agustinchateau/Desktop/Computacion-de-Alto-Rendimient-2026-Oct-19_17-10-24-678/Tarea 2/ejecucion/bin/datos", "2048", "2048", "2", "5"]
+{"rep":1,"ms":597.65300000000002,"checksum":172.33162744483667,"threads":2}
+{"rep":2,"ms":587.82454199999995,"checksum":172.33162744483667,"threads":2}
+{"rep":3,"ms":590.64750000000004,"checksum":172.33162744483667,"threads":2}
+{"rep":4,"ms":588.23387500000001,"checksum":172.33162744483667,"threads":2}
+{"rep":5,"ms":615.054125,"checksum":172.33162744483667,"threads":2}
+[22/67] datos N=2048 n=2048 p=4
+["/Users/agustinchateau/Desktop/Computacion-de-Alto-Rendimient-2026-Oct-19_17-10-24-678/Tarea 2/ejecucion/bin/datos", "2048", "2048", "4", "5"]
+{"rep":1,"ms":359.83154100000002,"checksum":172.33162744483667,"threads":4}
+{"rep":2,"ms":372.23525000000001,"checksum":172.33162744483667,"threads":4}
+{"rep":3,"ms":374.55541599999998,"checksum":172.33162744483667,"threads":4}
+{"rep":4,"ms":377.88549999999998,"checksum":172.33162744483667,"threads":4}
+{"rep":5,"ms":368.989375,"checksum":172.33162744483667,"threads":4}
+[23/67] datos N=2048 n=2048 p=8
+["/Users/agustinchateau/Desktop/Computacion-de-Alto-Rendimient-2026-Oct-19_17-10-24-678/Tarea 2/ejecucion/bin/datos", "2048", "2048", "8", "5"]
+{"rep":1,"ms":283.108791,"checksum":172.33162744483667,"threads":8}
+{"rep":2,"ms":297.842375,"checksum":172.33162744483667,"threads":8}
+{"rep":3,"ms":284.62979200000001,"checksum":172.33162744483667,"threads":8}
+{"rep":4,"ms":291.90825000000001,"checksum":172.33162744483667,"threads":8}
+{"rep":5,"ms":285.23737499999999,"checksum":172.33162744483667,"threads":8}
+[24/67] cuadrantes N=2048 n=64 p=1
+["/Users/agustinchateau/Desktop/Computacion-de-Alto-Rendimient-2026-Oct-19_17-10-24-678/Tarea 2/ejecucion/bin/cuadrantes", "2048", "64", "1", "5"]
+{"rep":1,"ms":1544.681208,"checksum":172.33162744483667,"threads":1}
+{"rep":2,"ms":1549.522833,"checksum":172.33162744483667,"threads":1}
+{"rep":3,"ms":1546.6385419999999,"checksum":172.33162744483667,"threads":1}
+{"rep":4,"ms":1561.620958,"checksum":172.33162744483667,"threads":1}
+{"rep":5,"ms":1553.4999580000001,"checksum":172.33162744483667,"threads":1}
+[25/67] cuadrantes N=2048 n=64 p=2
+["/Users/agustinchateau/Desktop/Computacion-de-Alto-Rendimient-2026-Oct-19_17-10-24-678/Tarea 2/ejecucion/bin/cuadrantes", "2048", "64", "2", "5"]
+{"rep":1,"ms":787.802459,"checksum":172.33162744483667,"threads":2}
+{"rep":2,"ms":786.29212500000006,"checksum":172.33162744483667,"threads":2}
+{"rep":3,"ms":788.50483399999996,"checksum":172.33162744483667,"threads":2}
+{"rep":4,"ms":788.98066600000004,"checksum":172.33162744483667,"threads":2}
+{"rep":5,"ms":816.68566599999997,"checksum":172.33162744483667,"threads":2}
+[26/67] cuadrantes N=2048 n=64 p=4
+["/Users/agustinchateau/Desktop/Computacion-de-Alto-Rendimient-2026-Oct-19_17-10-24-678/Tarea 2/ejecucion/bin/cuadrantes", "2048", "64", "4", "5"]
+{"rep":1,"ms":419.03504199999998,"checksum":172.33162744483667,"threads":4}
+{"rep":2,"ms":497.93675000000002,"checksum":172.33162744483667,"threads":4}
+{"rep":3,"ms":468.66820899999999,"checksum":172.33162744483667,"threads":4}
+{"rep":4,"ms":429.347667,"checksum":172.33162744483667,"threads":4}
+{"rep":5,"ms":425.221,"checksum":172.33162744483667,"threads":4}
+[27/67] cuadrantes N=2048 n=64 p=8
+["/Users/agustinchateau/Desktop/Computacion-de-Alto-Rendimient-2026-Oct-19_17-10-24-678/Tarea 2/ejecucion/bin/cuadrantes", "2048", "64", "8", "5"]
+{"rep":1,"ms":420.278458,"checksum":172.33162744483667,"threads":8}
+{"rep":2,"ms":429.72649999999999,"checksum":172.33162744483667,"threads":8}
+{"rep":3,"ms":431.30166600000001,"checksum":172.33162744483667,"threads":8}
+{"rep":4,"ms":433.82799999999997,"checksum":172.33162744483667,"threads":8}
+{"rep":5,"ms":433.17845799999998,"checksum":172.33162744483667,"threads":8}
+[28/67] numba N=2048 n=2048 p=1
+["/Users/agustinchateau/Desktop/Computacion-de-Alto-Rendimient-2026-Oct-19_17-10-24-678/Tarea 2/.venv/bin/python", "/Users/agustinchateau/Desktop/Computacion-de-Alto-Rendimient-2026-Oct-19_17-10-24-678/Tarea 2/ejecucion/numba_kernel.py", "2048", "2048", "1", "5"]
+{"rep": 1, "ms": 1076.3879999285564, "checksum": 172.3316274447883, "threads": 1}
+{"rep": 2, "ms": 1064.0649580163881, "checksum": 172.3316274447883, "threads": 1}
+{"rep": 3, "ms": 991.3099999539554, "checksum": 172.3316274447883, "threads": 1}
+{"rep": 4, "ms": 1017.0385000528768, "checksum": 172.3316274447883, "threads": 1}
+{"rep": 5, "ms": 997.7592090144753, "checksum": 172.3316274447883, "threads": 1}
+[29/67] numba N=2048 n=2048 p=2
+["/Users/agustinchateau/Desktop/Computacion-de-Alto-Rendimient-2026-Oct-19_17-10-24-678/Tarea 2/.venv/bin/python", "/Users/agustinchateau/Desktop/Computacion-de-Alto-Rendimient-2026-Oct-19_17-10-24-678/Tarea 2/ejecucion/numba_kernel.py", "2048", "2048", "2", "5"]
+{"rep": 1, "ms": 555.324082961306, "checksum": 172.3316274447883, "threads": 2}
+{"rep": 2, "ms": 540.3451659949496, "checksum": 172.3316274447883, "threads": 2}
+{"rep": 3, "ms": 546.7934580519795, "checksum": 172.3316274447883, "threads": 2}
+{"rep": 4, "ms": 545.0276250485331, "checksum": 172.3316274447883, "threads": 2}
+{"rep": 5, "ms": 570.1895420206711, "checksum": 172.3316274447883, "threads": 2}
+[30/67] numba N=2048 n=2048 p=4
+["/Users/agustinchateau/Desktop/Computacion-de-Alto-Rendimient-2026-Oct-19_17-10-24-678/Tarea 2/.venv/bin/python", "/Users/agustinchateau/Desktop/Computacion-de-Alto-Rendimient-2026-Oct-19_17-10-24-678/Tarea 2/ejecucion/numba_kernel.py", "2048", "2048", "4", "5"]
+{"rep": 1, "ms": 369.28654194343835, "checksum": 172.3316274447883, "threads": 4}
+{"rep": 2, "ms": 368.6788339400664, "checksum": 172.3316274447883, "threads": 4}
+{"rep": 3, "ms": 372.895541950129, "checksum": 172.3316274447883, "threads": 4}
+{"rep": 4, "ms": 378.09420796111226, "checksum": 172.3316274447883, "threads": 4}
+{"rep": 5, "ms": 378.8294169353321, "checksum": 172.3316274447883, "threads": 4}
+[31/67] numba N=2048 n=2048 p=8
+["/Users/agustinchateau/Desktop/Computacion-de-Alto-Rendimient-2026-Oct-19_17-10-24-678/Tarea 2/.venv/bin/python", "/Users/agustinchateau/Desktop/Computacion-de-Alto-Rendimient-2026-Oct-19_17-10-24-678/Tarea 2/ejecucion/numba_kernel.py", "2048", "2048", "8", "5"]
+{"rep": 1, "ms": 288.2427090080455, "checksum": 172.3316274447883, "threads": 8}
+{"rep": 2, "ms": 312.315332936123, "checksum": 172.3316274447883, "threads": 8}
+{"rep": 3, "ms": 309.0826669940725, "checksum": 172.3316274447883, "threads": 8}
+{"rep": 4, "ms": 306.12145899794996, "checksum": 172.3316274447883, "threads": 8}
+{"rep": 5, "ms": 313.5260409908369, "checksum": 172.3316274447883, "threads": 8}
+[32/67] datos N=4096 n=4096 p=1
+["/Users/agustinchateau/Desktop/Computacion-de-Alto-Rendimient-2026-Oct-19_17-10-24-678/Tarea 2/ejecucion/bin/datos", "4096", "4096", "1", "5"]
+{"rep":1,"ms":7958.8133330000001,"checksum":125.90302845575221,"threads":1}
+{"rep":2,"ms":7952.0517909999999,"checksum":125.90302845575221,"threads":1}
+{"rep":3,"ms":7953.0270419999997,"checksum":125.90302845575221,"threads":1}
+{"rep":4,"ms":8136.2359589999996,"checksum":125.90302845575221,"threads":1}
+{"rep":5,"ms":7989.3159580000001,"checksum":125.90302845575221,"threads":1}
+[33/67] datos N=4096 n=4096 p=2
+["/Users/agustinchateau/Desktop/Computacion-de-Alto-Rendimient-2026-Oct-19_17-10-24-678/Tarea 2/ejecucion/bin/datos", "4096", "4096", "2", "5"]
+{"rep":1,"ms":4317.9774580000003,"checksum":125.90302845575221,"threads":2}
+{"rep":2,"ms":4356.3790829999998,"checksum":125.90302845575221,"threads":2}
+{"rep":3,"ms":4396.0212080000001,"checksum":125.90302845575221,"threads":2}
+{"rep":4,"ms":4438.3162910000001,"checksum":125.90302845575221,"threads":2}
+{"rep":5,"ms":4460.79,"checksum":125.90302845575221,"threads":2}
+[34/67] datos N=4096 n=4096 p=4
+["/Users/agustinchateau/Desktop/Computacion-de-Alto-Rendimient-2026-Oct-19_17-10-24-678/Tarea 2/ejecucion/bin/datos", "4096", "4096", "4", "5"]
+{"rep":1,"ms":3330.5247920000002,"checksum":125.90302845575221,"threads":4}
+{"rep":2,"ms":3414.2242500000002,"checksum":125.90302845575221,"threads":4}
+{"rep":3,"ms":3386.4193329999998,"checksum":125.90302845575221,"threads":4}
+{"rep":4,"ms":3787.0822079999998,"checksum":125.90302845575221,"threads":4}
+{"rep":5,"ms":3694.0301250000002,"checksum":125.90302845575221,"threads":4}
+[35/67] datos N=4096 n=4096 p=8
+["/Users/agustinchateau/Desktop/Computacion-de-Alto-Rendimient-2026-Oct-19_17-10-24-678/Tarea 2/ejecucion/bin/datos", "4096", "4096", "8", "5"]
+{"rep":1,"ms":3505.836542,"checksum":125.90302845575221,"threads":8}
+{"rep":2,"ms":3457.0724580000001,"checksum":125.90302845575221,"threads":8}
+{"rep":3,"ms":3549.5664579999998,"checksum":125.90302845575221,"threads":8}
+{"rep":4,"ms":3371.0191249999998,"checksum":125.90302845575221,"threads":8}
+{"rep":5,"ms":3434.903084,"checksum":125.90302845575221,"threads":8}
+[36/67] cuadrantes N=4096 n=64 p=1
+["/Users/agustinchateau/Desktop/Computacion-de-Alto-Rendimient-2026-Oct-19_17-10-24-678/Tarea 2/ejecucion/bin/cuadrantes", "4096", "64", "1", "5"]
+{"rep":1,"ms":12410.712833,"checksum":125.90302845575221,"threads":1}
+{"rep":2,"ms":12393.534667,"checksum":125.90302845575221,"threads":1}
+{"rep":3,"ms":12495.27075,"checksum":125.90302845575221,"threads":1}
+{"rep":4,"ms":12388.707582999999,"checksum":125.90302845575221,"threads":1}
+{"rep":5,"ms":12408.859958999999,"checksum":125.90302845575221,"threads":1}
+[37/67] cuadrantes N=4096 n=64 p=2
+["/Users/agustinchateau/Desktop/Computacion-de-Alto-Rendimient-2026-Oct-19_17-10-24-678/Tarea 2/ejecucion/bin/cuadrantes", "4096", "64", "2", "5"]
+{"rep":1,"ms":7053.2553749999997,"checksum":125.90302845575221,"threads":2}
+{"rep":2,"ms":7343.0055830000001,"checksum":125.90302845575221,"threads":2}
+{"rep":3,"ms":6764.0468330000003,"checksum":125.90302845575221,"threads":2}
+{"rep":4,"ms":6628.5821669999996,"checksum":125.90302845575221,"threads":2}
+{"rep":5,"ms":6717.9107080000003,"checksum":125.90302845575221,"threads":2}
+[38/67] cuadrantes N=4096 n=64 p=4
+["/Users/agustinchateau/Desktop/Computacion-de-Alto-Rendimient-2026-Oct-19_17-10-24-678/Tarea 2/ejecucion/bin/cuadrantes", "4096", "64", "4", "5"]
+{"rep":1,"ms":3939.1030000000001,"checksum":125.90302845575221,"threads":4}
+{"rep":2,"ms":3953.6386670000002,"checksum":125.90302845575221,"threads":4}
+{"rep":3,"ms":3905.015042,"checksum":125.90302845575221,"threads":4}
+{"rep":4,"ms":3884.1396669999999,"checksum":125.90302845575221,"threads":4}
+{"rep":5,"ms":3936.4819170000001,"checksum":125.90302845575221,"threads":4}
+[39/67] cuadrantes N=4096 n=64 p=8
+["/Users/agustinchateau/Desktop/Computacion-de-Alto-Rendimient-2026-Oct-19_17-10-24-678/Tarea 2/ejecucion/bin/cuadrantes", "4096", "64", "8", "5"]
+{"rep":1,"ms":3931.6886249999998,"checksum":125.90302845575221,"threads":8}
+{"rep":2,"ms":3852.9794579999998,"checksum":125.90302845575221,"threads":8}
+{"rep":3,"ms":3892.1421249999999,"checksum":125.90302845575221,"threads":8}
+{"rep":4,"ms":3805.903292,"checksum":125.90302845575221,"threads":8}
+{"rep":5,"ms":3851.6480000000001,"checksum":125.90302845575221,"threads":8}
+[40/67] numba N=4096 n=4096 p=1
+["/Users/agustinchateau/Desktop/Computacion-de-Alto-Rendimient-2026-Oct-19_17-10-24-678/Tarea 2/.venv/bin/python", "/Users/agustinchateau/Desktop/Computacion-de-Alto-Rendimient-2026-Oct-19_17-10-24-678/Tarea 2/ejecucion/numba_kernel.py", "4096", "4096", "1", "5"]
+{"rep": 1, "ms": 7822.472041007131, "checksum": 125.90302845531176, "threads": 1}
+{"rep": 2, "ms": 7820.958207943477, "checksum": 125.90302845531176, "threads": 1}
+{"rep": 3, "ms": 7824.726750026457, "checksum": 125.90302845531176, "threads": 1}
+{"rep": 4, "ms": 7824.515082989819, "checksum": 125.90302845531176, "threads": 1}
+{"rep": 5, "ms": 7832.32016605325, "checksum": 125.90302845531176, "threads": 1}
+[41/67] numba N=4096 n=4096 p=2
+["/Users/agustinchateau/Desktop/Computacion-de-Alto-Rendimient-2026-Oct-19_17-10-24-678/Tarea 2/.venv/bin/python", "/Users/agustinchateau/Desktop/Computacion-de-Alto-Rendimient-2026-Oct-19_17-10-24-678/Tarea 2/ejecucion/numba_kernel.py", "4096", "4096", "2", "5"]
+{"rep": 1, "ms": 4337.215833947994, "checksum": 125.90302845531176, "threads": 2}
+{"rep": 2, "ms": 4520.875874906778, "checksum": 125.90302845531176, "threads": 2}
+{"rep": 3, "ms": 4474.501749966294, "checksum": 125.90302845531176, "threads": 2}
+{"rep": 4, "ms": 4517.138791969046, "checksum": 125.90302845531176, "threads": 2}
+{"rep": 5, "ms": 4793.548374902457, "checksum": 125.90302845531176, "threads": 2}
+[42/67] numba N=4096 n=4096 p=4
+["/Users/agustinchateau/Desktop/Computacion-de-Alto-Rendimient-2026-Oct-19_17-10-24-678/Tarea 2/.venv/bin/python", "/Users/agustinchateau/Desktop/Computacion-de-Alto-Rendimient-2026-Oct-19_17-10-24-678/Tarea 2/ejecucion/numba_kernel.py", "4096", "4096", "4", "5"]
+{"rep": 1, "ms": 3278.859750018455, "checksum": 125.90302845531176, "threads": 4}
+{"rep": 2, "ms": 3290.622083004564, "checksum": 125.90302845531176, "threads": 4}
+{"rep": 3, "ms": 3383.792458102107, "checksum": 125.90302845531176, "threads": 4}
+{"rep": 4, "ms": 3410.075291991234, "checksum": 125.90302845531176, "threads": 4}
+{"rep": 5, "ms": 3304.5665840618312, "checksum": 125.90302845531176, "threads": 4}
+[43/67] numba N=4096 n=4096 p=8
+["/Users/agustinchateau/Desktop/Computacion-de-Alto-Rendimient-2026-Oct-19_17-10-24-678/Tarea 2/.venv/bin/python", "/Users/agustinchateau/Desktop/Computacion-de-Alto-Rendimient-2026-Oct-19_17-10-24-678/Tarea 2/ejecucion/numba_kernel.py", "4096", "4096", "8", "5"]
+{"rep": 1, "ms": 3188.2805411005393, "checksum": 125.90302845531176, "threads": 8}
+{"rep": 2, "ms": 3207.5136250350624, "checksum": 125.90302845531176, "threads": 8}
+{"rep": 3, "ms": 3177.167540998198, "checksum": 125.90302845531176, "threads": 8}
+{"rep": 4, "ms": 3163.3714999770746, "checksum": 125.90302845531176, "threads": 8}
+{"rep": 5, "ms": 3214.0673329122365, "checksum": 125.90302845531176, "threads": 8}
+[44/67] cuadrantes N=2048 n=2048 p=1
+["/Users/agustinchateau/Desktop/Computacion-de-Alto-Rendimient-2026-Oct-19_17-10-24-678/Tarea 2/ejecucion/bin/cuadrantes", "2048", "2048", "1", "5"]
+{"rep":1,"ms":1003.049458,"checksum":172.33162744483667,"threads":1}
+{"rep":2,"ms":1013.443292,"checksum":172.33162744483667,"threads":1}
+{"rep":3,"ms":1025.0887090000001,"checksum":172.33162744483667,"threads":1}
+{"rep":4,"ms":1019.751083,"checksum":172.33162744483667,"threads":1}
+{"rep":5,"ms":998.29483300000004,"checksum":172.33162744483667,"threads":1}
+[45/67] cuadrantes N=2048 n=2048 p=2
+["/Users/agustinchateau/Desktop/Computacion-de-Alto-Rendimient-2026-Oct-19_17-10-24-678/Tarea 2/ejecucion/bin/cuadrantes", "2048", "2048", "2", "5"]
+{"rep":1,"ms":975.40633300000002,"checksum":172.33162744483667,"threads":2}
+{"rep":2,"ms":971.52025000000003,"checksum":172.33162744483667,"threads":2}
+{"rep":3,"ms":972.55583300000001,"checksum":172.33162744483667,"threads":2}
+{"rep":4,"ms":968.65045799999996,"checksum":172.33162744483667,"threads":2}
+{"rep":5,"ms":968.80487500000004,"checksum":172.33162744483667,"threads":2}
+[46/67] cuadrantes N=2048 n=2048 p=4
+["/Users/agustinchateau/Desktop/Computacion-de-Alto-Rendimient-2026-Oct-19_17-10-24-678/Tarea 2/ejecucion/bin/cuadrantes", "2048", "2048", "4", "5"]
+{"rep":1,"ms":967.22837500000003,"checksum":172.33162744483667,"threads":4}
+{"rep":2,"ms":971.03462500000001,"checksum":172.33162744483667,"threads":4}
+{"rep":3,"ms":966.02708299999995,"checksum":172.33162744483667,"threads":4}
+{"rep":4,"ms":965.23754199999996,"checksum":172.33162744483667,"threads":4}
+{"rep":5,"ms":967.15112499999998,"checksum":172.33162744483667,"threads":4}
+[47/67] cuadrantes N=2048 n=2048 p=8
+["/Users/agustinchateau/Desktop/Computacion-de-Alto-Rendimient-2026-Oct-19_17-10-24-678/Tarea 2/ejecucion/bin/cuadrantes", "2048", "2048", "8", "5"]
+{"rep":1,"ms":1190.5702080000001,"checksum":172.33162744483667,"threads":8}
+{"rep":2,"ms":967.82745899999998,"checksum":172.33162744483667,"threads":8}
+{"rep":3,"ms":971.82083399999999,"checksum":172.33162744483667,"threads":8}
+{"rep":4,"ms":966.70195899999999,"checksum":172.33162744483667,"threads":8}
+{"rep":5,"ms":967.89774999999997,"checksum":172.33162744483667,"threads":8}
+[48/67] cuadrantes N=2048 n=1024 p=1
+["/Users/agustinchateau/Desktop/Computacion-de-Alto-Rendimient-2026-Oct-19_17-10-24-678/Tarea 2/ejecucion/bin/cuadrantes", "2048", "1024", "1", "5"]
+{"rep":1,"ms":1077.432959,"checksum":172.33162744483667,"threads":1}
+{"rep":2,"ms":1053.7562499999999,"checksum":172.33162744483667,"threads":1}
+{"rep":3,"ms":1050.508417,"checksum":172.33162744483667,"threads":1}
+{"rep":4,"ms":1050.4510829999999,"checksum":172.33162744483667,"threads":1}
+{"rep":5,"ms":1050.2204999999999,"checksum":172.33162744483667,"threads":1}
+[49/67] cuadrantes N=2048 n=1024 p=2
+["/Users/agustinchateau/Desktop/Computacion-de-Alto-Rendimient-2026-Oct-19_17-10-24-678/Tarea 2/ejecucion/bin/cuadrantes", "2048", "1024", "2", "5"]
+{"rep":1,"ms":540.66824999999994,"checksum":172.33162744483667,"threads":2}
+{"rep":2,"ms":564.62487499999997,"checksum":172.33162744483667,"threads":2}
+{"rep":3,"ms":546.44258300000001,"checksum":172.33162744483667,"threads":2}
+{"rep":4,"ms":542.89345900000001,"checksum":172.33162744483667,"threads":2}
+{"rep":5,"ms":554.97962500000006,"checksum":172.33162744483667,"threads":2}
+[50/67] cuadrantes N=2048 n=1024 p=4
+["/Users/agustinchateau/Desktop/Computacion-de-Alto-Rendimient-2026-Oct-19_17-10-24-678/Tarea 2/ejecucion/bin/cuadrantes", "2048", "1024", "4", "5"]
+{"rep":1,"ms":350.00804099999999,"checksum":172.33162744483667,"threads":4}
+{"rep":2,"ms":363.56741599999998,"checksum":172.33162744483667,"threads":4}
+{"rep":3,"ms":359.18562500000002,"checksum":172.33162744483667,"threads":4}
+{"rep":4,"ms":352.11558300000002,"checksum":172.33162744483667,"threads":4}
+{"rep":5,"ms":359.21783299999998,"checksum":172.33162744483667,"threads":4}
+[51/67] cuadrantes N=2048 n=1024 p=8
+["/Users/agustinchateau/Desktop/Computacion-de-Alto-Rendimient-2026-Oct-19_17-10-24-678/Tarea 2/ejecucion/bin/cuadrantes", "2048", "1024", "8", "5"]
+{"rep":1,"ms":350.79829100000001,"checksum":172.33162744483667,"threads":8}
+{"rep":2,"ms":358.29262499999999,"checksum":172.33162744483667,"threads":8}
+{"rep":3,"ms":400.510583,"checksum":172.33162744483667,"threads":8}
+{"rep":4,"ms":359.52395799999999,"checksum":172.33162744483667,"threads":8}
+{"rep":5,"ms":358.768417,"checksum":172.33162744483667,"threads":8}
+[52/67] cuadrantes N=2048 n=512 p=1
+["/Users/agustinchateau/Desktop/Computacion-de-Alto-Rendimient-2026-Oct-19_17-10-24-678/Tarea 2/ejecucion/bin/cuadrantes", "2048", "512", "1", "5"]
+{"rep":1,"ms":1075.9477919999999,"checksum":172.33162744483667,"threads":1}
+{"rep":2,"ms":1075.187584,"checksum":172.33162744483667,"threads":1}
+{"rep":3,"ms":1077.798542,"checksum":172.33162744483667,"threads":1}
+{"rep":4,"ms":1077.3359579999999,"checksum":172.33162744483667,"threads":1}
+{"rep":5,"ms":1079.426958,"checksum":172.33162744483667,"threads":1}
+[53/67] cuadrantes N=2048 n=512 p=2
+["/Users/agustinchateau/Desktop/Computacion-de-Alto-Rendimient-2026-Oct-19_17-10-24-678/Tarea 2/ejecucion/bin/cuadrantes", "2048", "512", "2", "5"]
+{"rep":1,"ms":554.74116700000002,"checksum":172.33162744483667,"threads":2}
+{"rep":2,"ms":559.15662499999996,"checksum":172.33162744483667,"threads":2}
+{"rep":3,"ms":559.29041700000005,"checksum":172.33162744483667,"threads":2}
+{"rep":4,"ms":561.26383299999998,"checksum":172.33162744483667,"threads":2}
+{"rep":5,"ms":556.94062499999995,"checksum":172.33162744483667,"threads":2}
+[54/67] cuadrantes N=2048 n=512 p=4
+["/Users/agustinchateau/Desktop/Computacion-de-Alto-Rendimient-2026-Oct-19_17-10-24-678/Tarea 2/ejecucion/bin/cuadrantes", "2048", "512", "4", "5"]
+{"rep":1,"ms":330.07295900000003,"checksum":172.33162744483667,"threads":4}
+{"rep":2,"ms":346.27245799999997,"checksum":172.33162744483667,"threads":4}
+{"rep":3,"ms":337.39550000000003,"checksum":172.33162744483667,"threads":4}
+{"rep":4,"ms":332.41145799999998,"checksum":172.33162744483667,"threads":4}
+{"rep":5,"ms":340.91958299999999,"checksum":172.33162744483667,"threads":4}
+[55/67] cuadrantes N=2048 n=512 p=8
+["/Users/agustinchateau/Desktop/Computacion-de-Alto-Rendimient-2026-Oct-19_17-10-24-678/Tarea 2/ejecucion/bin/cuadrantes", "2048", "512", "8", "5"]
+{"rep":1,"ms":327.85662500000001,"checksum":172.33162744483667,"threads":8}
+{"rep":2,"ms":344.64654200000001,"checksum":172.33162744483667,"threads":8}
+{"rep":3,"ms":336.11837500000001,"checksum":172.33162744483667,"threads":8}
+{"rep":4,"ms":332.98595899999998,"checksum":172.33162744483667,"threads":8}
+{"rep":5,"ms":330.53229199999998,"checksum":172.33162744483667,"threads":8}
+[56/67] cuadrantes N=2048 n=256 p=1
+["/Users/agustinchateau/Desktop/Computacion-de-Alto-Rendimient-2026-Oct-19_17-10-24-678/Tarea 2/ejecucion/bin/cuadrantes", "2048", "256", "1", "5"]
+{"rep":1,"ms":1231.9990419999999,"checksum":172.33162744483667,"threads":1}
+{"rep":2,"ms":1230.972,"checksum":172.33162744483667,"threads":1}
+{"rep":3,"ms":1232.198666,"checksum":172.33162744483667,"threads":1}
+{"rep":4,"ms":1229.0451660000001,"checksum":172.33162744483667,"threads":1}
+{"rep":5,"ms":1248.951583,"checksum":172.33162744483667,"threads":1}
+[57/67] cuadrantes N=2048 n=256 p=2
+["/Users/agustinchateau/Desktop/Computacion-de-Alto-Rendimient-2026-Oct-19_17-10-24-678/Tarea 2/ejecucion/bin/cuadrantes", "2048", "256", "2", "5"]
+{"rep":1,"ms":639.88804100000004,"checksum":172.33162744483667,"threads":2}
+{"rep":2,"ms":644.167958,"checksum":172.33162744483667,"threads":2}
+{"rep":3,"ms":641.98362499999996,"checksum":172.33162744483667,"threads":2}
+{"rep":4,"ms":644.71554100000003,"checksum":172.33162744483667,"threads":2}
+{"rep":5,"ms":646.70262500000001,"checksum":172.33162744483667,"threads":2}
+[58/67] cuadrantes N=2048 n=256 p=4
+["/Users/agustinchateau/Desktop/Computacion-de-Alto-Rendimient-2026-Oct-19_17-10-24-678/Tarea 2/ejecucion/bin/cuadrantes", "2048", "256", "4", "5"]
+{"rep":1,"ms":368.10441700000001,"checksum":172.33162744483667,"threads":4}
+{"rep":2,"ms":377.37670900000001,"checksum":172.33162744483667,"threads":4}
+{"rep":3,"ms":377.10808300000002,"checksum":172.33162744483667,"threads":4}
+{"rep":4,"ms":376.28370799999999,"checksum":172.33162744483667,"threads":4}
+{"rep":5,"ms":381.43208299999998,"checksum":172.33162744483667,"threads":4}
+[59/67] cuadrantes N=2048 n=256 p=8
+["/Users/agustinchateau/Desktop/Computacion-de-Alto-Rendimient-2026-Oct-19_17-10-24-678/Tarea 2/ejecucion/bin/cuadrantes", "2048", "256", "8", "5"]
+{"rep":1,"ms":380.599625,"checksum":172.33162744483667,"threads":8}
+{"rep":2,"ms":379.30929099999997,"checksum":172.33162744483667,"threads":8}
+{"rep":3,"ms":379.39437500000003,"checksum":172.33162744483667,"threads":8}
+{"rep":4,"ms":383.92379199999999,"checksum":172.33162744483667,"threads":8}
+{"rep":5,"ms":381.70458300000001,"checksum":172.33162744483667,"threads":8}
+[60/67] cuadrantes N=2048 n=128 p=1
+["/Users/agustinchateau/Desktop/Computacion-de-Alto-Rendimient-2026-Oct-19_17-10-24-678/Tarea 2/ejecucion/bin/cuadrantes", "2048", "128", "1", "5"]
+{"rep":1,"ms":1254.772166,"checksum":172.33162744483667,"threads":1}
+{"rep":2,"ms":1254.2822920000001,"checksum":172.33162744483667,"threads":1}
+{"rep":3,"ms":1255.8532499999999,"checksum":172.33162744483667,"threads":1}
+{"rep":4,"ms":1256.2412919999999,"checksum":172.33162744483667,"threads":1}
+{"rep":5,"ms":1276.1157920000001,"checksum":172.33162744483667,"threads":1}
+[61/67] cuadrantes N=2048 n=128 p=2
+["/Users/agustinchateau/Desktop/Computacion-de-Alto-Rendimient-2026-Oct-19_17-10-24-678/Tarea 2/ejecucion/bin/cuadrantes", "2048", "128", "2", "5"]
+{"rep":1,"ms":657.47625000000005,"checksum":172.33162744483667,"threads":2}
+{"rep":2,"ms":661.17666699999995,"checksum":172.33162744483667,"threads":2}
+{"rep":3,"ms":668.59062500000005,"checksum":172.33162744483667,"threads":2}
+{"rep":4,"ms":667.11666700000001,"checksum":172.33162744483667,"threads":2}
+{"rep":5,"ms":668.36970799999995,"checksum":172.33162744483667,"threads":2}
+[62/67] cuadrantes N=2048 n=128 p=4
+["/Users/agustinchateau/Desktop/Computacion-de-Alto-Rendimient-2026-Oct-19_17-10-24-678/Tarea 2/ejecucion/bin/cuadrantes", "2048", "128", "4", "5"]
+{"rep":1,"ms":373.12233300000003,"checksum":172.33162744483667,"threads":4}
+{"rep":2,"ms":378.19912499999998,"checksum":172.33162744483667,"threads":4}
+{"rep":3,"ms":372.002208,"checksum":172.33162744483667,"threads":4}
+{"rep":4,"ms":376.93950000000001,"checksum":172.33162744483667,"threads":4}
+{"rep":5,"ms":375.95029199999999,"checksum":172.33162744483667,"threads":4}
+[63/67] cuadrantes N=2048 n=128 p=8
+["/Users/agustinchateau/Desktop/Computacion-de-Alto-Rendimient-2026-Oct-19_17-10-24-678/Tarea 2/ejecucion/bin/cuadrantes", "2048", "128", "8", "5"]
+{"rep":1,"ms":379.17824999999999,"checksum":172.33162744483667,"threads":8}
+{"rep":2,"ms":384.659583,"checksum":172.33162744483667,"threads":8}
+{"rep":3,"ms":384.17079200000001,"checksum":172.33162744483667,"threads":8}
+{"rep":4,"ms":383.97454099999999,"checksum":172.33162744483667,"threads":8}
+{"rep":5,"ms":383.18491599999999,"checksum":172.33162744483667,"threads":8}
+[64/67] cuadrantes N=2048 n=32 p=1
+["/Users/agustinchateau/Desktop/Computacion-de-Alto-Rendimient-2026-Oct-19_17-10-24-678/Tarea 2/ejecucion/bin/cuadrantes", "2048", "32", "1", "5"]
+{"rep":1,"ms":2272.5336659999998,"checksum":172.33162744483667,"threads":1}
+{"rep":2,"ms":2183.1076250000001,"checksum":172.33162744483667,"threads":1}
+{"rep":3,"ms":2185.4309170000001,"checksum":172.33162744483667,"threads":1}
+{"rep":4,"ms":2184.5823340000002,"checksum":172.33162744483667,"threads":1}
+{"rep":5,"ms":2182.20075,"checksum":172.33162744483667,"threads":1}
+[65/67] cuadrantes N=2048 n=32 p=2
+["/Users/agustinchateau/Desktop/Computacion-de-Alto-Rendimient-2026-Oct-19_17-10-24-678/Tarea 2/ejecucion/bin/cuadrantes", "2048", "32", "2", "5"]
+{"rep":1,"ms":1106.0932499999999,"checksum":172.33162744483667,"threads":2}
+{"rep":2,"ms":1104.3970420000001,"checksum":172.33162744483667,"threads":2}
+{"rep":3,"ms":1104.479208,"checksum":172.33162744483667,"threads":2}
+{"rep":4,"ms":1105.1509169999999,"checksum":172.33162744483667,"threads":2}
+{"rep":5,"ms":1113.5167080000001,"checksum":172.33162744483667,"threads":2}
+[66/67] cuadrantes N=2048 n=32 p=4
+["/Users/agustinchateau/Desktop/Computacion-de-Alto-Rendimient-2026-Oct-19_17-10-24-678/Tarea 2/ejecucion/bin/cuadrantes", "2048", "32", "4", "5"]
+{"rep":1,"ms":631.45254199999999,"checksum":172.33162744483667,"threads":4}
+{"rep":2,"ms":637.19333300000005,"checksum":172.33162744483667,"threads":4}
+{"rep":3,"ms":638.05162499999994,"checksum":172.33162744483667,"threads":4}
+{"rep":4,"ms":636.39700000000005,"checksum":172.33162744483667,"threads":4}
+{"rep":5,"ms":639.91379099999995,"checksum":172.33162744483667,"threads":4}
+[67/67] cuadrantes N=2048 n=32 p=8
+["/Users/agustinchateau/Desktop/Computacion-de-Alto-Rendimient-2026-Oct-19_17-10-24-678/Tarea 2/ejecucion/bin/cuadrantes", "2048", "32", "8", "5"]
+{"rep":1,"ms":642.32408299999997,"checksum":172.33162744483667,"threads":8}
+{"rep":2,"ms":648.36641699999996,"checksum":172.33162744483667,"threads":8}
+{"rep":3,"ms":647.60487499999999,"checksum":172.33162744483667,"threads":8}
+{"rep":4,"ms":652.52212499999996,"checksum":172.33162744483667,"threads":8}
+{"rep":5,"ms":651.72229200000004,"checksum":172.33162744483667,"threads":8}

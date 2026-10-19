@@ -1,0 +1,540 @@
+{
+  "status": "complete",
+  "started": "2026-10-19T19:23:35.354534+00:00",
+  "purpose": "mediciones para la tarea",
+  "equipo": "Apple-M5",
+  "arguments": {
+    "plan": false,
+    "variante": "cuadrantes",
+    "repeticiones": 5,
+    "equipo": "Apple-M5",
+    "prueba": false
+  },
+  "hardware": {
+    "system": "macOS-26.6.2-arm64-arm-64bit-Mach-O",
+    "architecture": "arm64",
+    "python": "3.13.13 (main, Apr  7 2026, 18:19:01) [Clang 21.0.0 (clang-2100.0.123.102)]",
+    "logical_cpus": 10,
+    "packages": {
+      "numpy": "2.5.4",
+      "numba": "0.68.0",
+      "llvmlite": "0.50.0",
+      "matplotlib": "3.11.2"
+    },
+    "sysctl": {
+      "hw.model": "Mac17,2",
+      "machdep.cpu.brand_string": "Apple M5",
+      "hw.physicalcpu": "10",
+      "hw.logicalcpu": "10",
+      "hw.memsize": "17179869184",
+      "hw.cpufrequency": null,
+      "hw.cpufrequency_max": null,
+      "hw.nperflevels": "2",
+      "hw.perflevel0.name": "Super",
+      "hw.perflevel0.physicalcpu": "4",
+      "hw.perflevel0.cpufrequency_max": null,
+      "hw.perflevel1.name": "Efficiency",
+      "hw.perflevel1.physicalcpu": "6",
+      "hw.perflevel1.cpufrequency_max": null
+    },
+    "power": "Now drawing from 'Battery Power'\n -InternalBattery-0 (id=35061859)\t33%; discharging; (no estimate) present: true",
+    "clock_note": "null significa que el sistema no expone la frecuencia; no es una medición del reloj"
+  },
+  "build": {
+    "compiler": "Apple clang version 21.0.0 (clang-2100.1.1.101)\nTarget: arm64-apple-darwin25.6.0\nThread model: posix\nInstalledDir: /Library/Developer/CommandLineTools/usr/bin\n",
+    "commands": [
+      [
+        "/usr/bin/clang++",
+        "-O3",
+        "-mcpu=native",
+        "-std=c++17",
+        "-Xpreprocessor",
+        "-fopenmp",
+        "-I/opt/homebrew/opt/libomp/include",
+        "-L/opt/homebrew/opt/libomp/lib",
+        "-Wl,-rpath,/opt/homebrew/opt/libomp/lib",
+        "-lomp",
+        "-DALGORITHM=0",
+        "-I/Users/agustinchateau/Desktop/Computacion-de-Alto-Rendimient-2026-Oct-19_17-10-24-678/Tarea 2/Códigos",
+        "/Users/agustinchateau/Desktop/Computacion-de-Alto-Rendimient-2026-Oct-19_17-10-24-678/Tarea 2/ejecucion/benchmark.cpp",
+        "-o",
+        "/Users/agustinchateau/Desktop/Computacion-de-Alto-Rendimient-2026-Oct-19_17-10-24-678/Tarea 2/ejecucion/bin/serial"
+      ],
+      [
+        "/usr/bin/clang++",
+        "-O3",
+        "-mcpu=native",
+        "-std=c++17",
+        "-Xpreprocessor",
+        "-fopenmp",
+        "-I/opt/homebrew/opt/libomp/include",
+        "-L/opt/homebrew/opt/libomp/lib",
+        "-Wl,-rpath,/opt/homebrew/opt/libomp/lib",
+        "-lomp",
+        "-DALGORITHM=1",
+        "-I/Users/agustinchateau/Desktop/Computacion-de-Alto-Rendimient-2026-Oct-19_17-10-24-678/Tarea 2/Códigos",
+        "/Users/agustinchateau/Desktop/Computacion-de-Alto-Rendimient-2026-Oct-19_17-10-24-678/Tarea 2/ejecucion/benchmark.cpp",
+        "-o",
+        "/Users/agustinchateau/Desktop/Computacion-de-Alto-Rendimient-2026-Oct-19_17-10-24-678/Tarea 2/ejecucion/bin/datos"
+      ],
+      [
+        "/usr/bin/clang++",
+        "-O3",
+        "-mcpu=native",
+        "-std=c++17",
+        "-Xpreprocessor",
+        "-fopenmp",
+        "-I/opt/homebrew/opt/libomp/include",
+        "-L/opt/homebrew/opt/libomp/lib",
+        "-Wl,-rpath,/opt/homebrew/opt/libomp/lib",
+        "-lomp",
+        "-DALGORITHM=2",
+        "-I/Users/agustinchateau/Desktop/Computacion-de-Alto-Rendimient-2026-Oct-19_17-10-24-678/Tarea 2/Códigos",
+        "/Users/agustinchateau/Desktop/Computacion-de-Alto-Rendimient-2026-Oct-19_17-10-24-678/Tarea 2/ejecucion/benchmark.cpp",
+        "-o",
+        "/Users/agustinchateau/Desktop/Computacion-de-Alto-Rendimient-2026-Oct-19_17-10-24-678/Tarea 2/ejecucion/bin/tareas"
+      ],
+      [
+        "/usr/bin/clang++",
+        "-O3",
+        "-mcpu=native",
+        "-std=c++17",
+        "-Xpreprocessor",
+        "-fopenmp",
+        "-I/opt/homebrew/opt/libomp/include",
+        "-L/opt/homebrew/opt/libomp/lib",
+        "-Wl,-rpath,/opt/homebrew/opt/libomp/lib",
+        "-lomp",
+        "-DALGORITHM=3",
+        "-I/Users/agustinchateau/Desktop/Computacion-de-Alto-Rendimient-2026-Oct-19_17-10-24-678/Tarea 2/Códigos",
+        "/Users/agustinchateau/Desktop/Computacion-de-Alto-Rendimient-2026-Oct-19_17-10-24-678/Tarea 2/ejecucion/benchmark.cpp",
+        "-o",
+        "/Users/agustinchateau/Desktop/Computacion-de-Alto-Rendimient-2026-Oct-19_17-10-24-678/Tarea 2/ejecucion/bin/cuadrantes"
+      ]
+    ],
+    "sources": {
+      "ejecucion/benchmark.cpp": "199d8e3d5eefac70c828ef4d311373628ffc8a37027ee1f288a238ac0bececd9",
+      "Códigos/paralelo_c.cpp": "793bfa2b6d99f8086dd90231cb833ce6d45b1d909802b1b51c61fadd5bf4fd9a",
+      "Códigos/serial.cpp": "6cae1df4844a262cfc78ea3bed49c616a7e8b6c10ae947a367e3a164d3a0be17",
+      "Códigos/paralelo_c_cuadrantes.cpp": "0f019a3bd2fa3b447bf7ac235893ec22c0e1e4ab14942cfe153d4ca4d0725179"
+    },
+    "binaries": {
+      "serial": "5e428e280613229fd40693e5e54d3d8a3d57e1afe5d2a49f2dced3a6fdd72f41",
+      "datos": "595219a37b7cd093ed2116ab8edb7927226140f3b1715ae5d8218a567baf2b80",
+      "tareas": "0c2c4b84154d40e064d9f64109da4090bd06c44b37be8a3757fe47e02537d793",
+      "cuadrantes": "44659de17de8c40c64685866d5cff9e75858c22b8a6580c1b95ad8c8ab5db5ca"
+    }
+  },
+  "expected_checksums": {
+    "1024": 52.22392735205112,
+    "2048": 172.33162744479634,
+    "4096": 125.90302845571469
+  },
+  "jobs": [
+    [
+      "serial",
+      2048,
+      2048,
+      1
+    ],
+    [
+      "serial",
+      2048,
+      1024,
+      1
+    ],
+    [
+      "serial",
+      2048,
+      512,
+      1
+    ],
+    [
+      "serial",
+      2048,
+      256,
+      1
+    ],
+    [
+      "serial",
+      2048,
+      128,
+      1
+    ],
+    [
+      "serial",
+      2048,
+      64,
+      1
+    ],
+    [
+      "serial",
+      2048,
+      32,
+      1
+    ],
+    [
+      "datos",
+      1024,
+      1024,
+      1
+    ],
+    [
+      "datos",
+      1024,
+      1024,
+      2
+    ],
+    [
+      "datos",
+      1024,
+      1024,
+      4
+    ],
+    [
+      "datos",
+      1024,
+      1024,
+      8
+    ],
+    [
+      "cuadrantes",
+      1024,
+      64,
+      1
+    ],
+    [
+      "cuadrantes",
+      1024,
+      64,
+      2
+    ],
+    [
+      "cuadrantes",
+      1024,
+      64,
+      4
+    ],
+    [
+      "cuadrantes",
+      1024,
+      64,
+      8
+    ],
+    [
+      "numba",
+      1024,
+      1024,
+      1
+    ],
+    [
+      "numba",
+      1024,
+      1024,
+      2
+    ],
+    [
+      "numba",
+      1024,
+      1024,
+      4
+    ],
+    [
+      "numba",
+      1024,
+      1024,
+      8
+    ],
+    [
+      "datos",
+      2048,
+      2048,
+      1
+    ],
+    [
+      "datos",
+      2048,
+      2048,
+      2
+    ],
+    [
+      "datos",
+      2048,
+      2048,
+      4
+    ],
+    [
+      "datos",
+      2048,
+      2048,
+      8
+    ],
+    [
+      "cuadrantes",
+      2048,
+      64,
+      1
+    ],
+    [
+      "cuadrantes",
+      2048,
+      64,
+      2
+    ],
+    [
+      "cuadrantes",
+      2048,
+      64,
+      4
+    ],
+    [
+      "cuadrantes",
+      2048,
+      64,
+      8
+    ],
+    [
+      "numba",
+      2048,
+      2048,
+      1
+    ],
+    [
+      "numba",
+      2048,
+      2048,
+      2
+    ],
+    [
+      "numba",
+      2048,
+      2048,
+      4
+    ],
+    [
+      "numba",
+      2048,
+      2048,
+      8
+    ],
+    [
+      "datos",
+      4096,
+      4096,
+      1
+    ],
+    [
+      "datos",
+      4096,
+      4096,
+      2
+    ],
+    [
+      "datos",
+      4096,
+      4096,
+      4
+    ],
+    [
+      "datos",
+      4096,
+      4096,
+      8
+    ],
+    [
+      "cuadrantes",
+      4096,
+      64,
+      1
+    ],
+    [
+      "cuadrantes",
+      4096,
+      64,
+      2
+    ],
+    [
+      "cuadrantes",
+      4096,
+      64,
+      4
+    ],
+    [
+      "cuadrantes",
+      4096,
+      64,
+      8
+    ],
+    [
+      "numba",
+      4096,
+      4096,
+      1
+    ],
+    [
+      "numba",
+      4096,
+      4096,
+      2
+    ],
+    [
+      "numba",
+      4096,
+      4096,
+      4
+    ],
+    [
+      "numba",
+      4096,
+      4096,
+      8
+    ],
+    [
+      "cuadrantes",
+      2048,
+      2048,
+      1
+    ],
+    [
+      "cuadrantes",
+      2048,
+      2048,
+      2
+    ],
+    [
+      "cuadrantes",
+      2048,
+      2048,
+      4
+    ],
+    [
+      "cuadrantes",
+      2048,
+      2048,
+      8
+    ],
+    [
+      "cuadrantes",
+      2048,
+      1024,
+      1
+    ],
+    [
+      "cuadrantes",
+      2048,
+      1024,
+      2
+    ],
+    [
+      "cuadrantes",
+      2048,
+      1024,
+      4
+    ],
+    [
+      "cuadrantes",
+      2048,
+      1024,
+      8
+    ],
+    [
+      "cuadrantes",
+      2048,
+      512,
+      1
+    ],
+    [
+      "cuadrantes",
+      2048,
+      512,
+      2
+    ],
+    [
+      "cuadrantes",
+      2048,
+      512,
+      4
+    ],
+    [
+      "cuadrantes",
+      2048,
+      512,
+      8
+    ],
+    [
+      "cuadrantes",
+      2048,
+      256,
+      1
+    ],
+    [
+      "cuadrantes",
+      2048,
+      256,
+      2
+    ],
+    [
+      "cuadrantes",
+      2048,
+      256,
+      4
+    ],
+    [
+      "cuadrantes",
+      2048,
+      256,
+      8
+    ],
+    [
+      "cuadrantes",
+      2048,
+      128,
+      1
+    ],
+    [
+      "cuadrantes",
+      2048,
+      128,
+      2
+    ],
+    [
+      "cuadrantes",
+      2048,
+      128,
+      4
+    ],
+    [
+      "cuadrantes",
+      2048,
+      128,
+      8
+    ],
+    [
+      "cuadrantes",
+      2048,
+      32,
+      1
+    ],
+    [
+      "cuadrantes",
+      2048,
+      32,
+      2
+    ],
+    [
+      "cuadrantes",
+      2048,
+      32,
+      4
+    ],
+    [
+      "cuadrantes",
+      2048,
+      32,
+      8
+    ]
+  ],
+  "timing": "Solo kernel; reserva, inicialización, cero, checksum y JIT fuera. Warm-up completo por configuración.",
+  "validation": "Matrices completas pequeñas y checksum independiente en cada repetición; no valida cada elemento de matrices grandes.",
+  "finished": "2026-10-19T19:33:55.997360+00:00"
+}

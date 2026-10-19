@@ -1,0 +1,7 @@
+Resultados exclusivos de este computador.
+mediciones.csv: repeticiones crudas en ms. resumen.csv: media, desviación muestral, T(1), S y E.
+Cada serie usa su T(1) con el mismo algoritmo, N y n. La variante de c queda en metadata.json.
+Para justificar n, consultar bloques.png y el barrido completo en resumen.csv.
+Escalabilidad débil: N³/p constante; se muestran dos pares independientes, no una trayectoria de 3 tamaños.
+El apartado g requiere resultados del otro computador, aún no incluidos aquí.
+metadata.json guarda entorno, compilación y estado; fuentes/ conserva los códigos utilizados.
