@@ -1,47 +1,61 @@
 # Instrucciones y Contexto para Agentes de IA (Codex, Claude Code, Antigravity)
 
-Este repositorio contiene el código, scripts de benchmark y documentación de la **Tarea 2 de IIC3533 - Computación de Alto Rendimiento (HPC)**, Pontificia Universidad Católica de Chile.
+Este repositorio contiene el código fuente, suite de benchmarks y documentación técnica de la **Tarea 2 de IIC3533 - Computación de Alto Rendimiento (HPC)**, Pontificia Universidad Católica de Chile.
 
 ---
 
 ## 1. Contexto de la Tarea y Objetivo del Agente
 
 La tarea estudia la multiplicación de matrices densas $C = A \cdot B$ de tamaño $N \times N$ ($\mathcal{O}(N^3)$ operaciones) comparando tres algoritmos paralelos:
-1. **Algoritmo 1 (C++ con OpenMP):** Paralelismo de datos sobre el bucle exterior de filas (`paralelo_b.cpp`).
-2. **Algoritmo 2 (C++ con OpenMP):** Dividir y conquistar por cuadrantes usando tareas recursivas (`paralelo_c.cpp`).
-3. **Algoritmo 3 (Python con Numba):** Paralelismo de datos con compilación JIT nativa `@njit(parallel=True)` y `prange` (`paralelo_d_numba.py`).
+1. **Algoritmo 1 (C++ con OpenMP):** Paralelismo de datos sobre el bucle exterior de filas (`src/paralelo_b.cpp`).
+2. **Algoritmo 2 (C++ con OpenMP):** Dividir y conquistar por cuadrantes usando tareas recursivas (`src/paralelo_c.cpp`).
+3. **Algoritmo 3 (Python con Numba):** Paralelismo de datos con compilación JIT nativa `@njit(parallel=True)` y `prange` (`src/paralelo_d_numba.py`).
 
 ### 🎯 Estado Actual del Repositorio:
-- **Computador 1 ya fue medido:** Los experimentos del primer computador (Apple A18 Pro, 6 cores heterogéneos) ya fueron completados con éxito y sus resultados están guardados en `resultados_computador_1.json`, `INFORME_EXPERIMENTOS.md` e `INFORME_EXPERIMENTOS.pdf`.
+- **Computador 1 ya fue medido:** Los experimentos del primer computador (Apple A18 Pro, 6 cores heterogéneos) ya fueron completados con éxito y sus resultados están guardados en `resultados/computador_1/`.
 - **Tu misión como Agente en esta máquina (Computador 2):**
   1. Detectar las características de hardware de este nuevo computador (núcleos físicos, núcleos lógicos, frecuencia de reloj, memoria RAM y arquitectura).
   2. Compilar los códigos fuente C++ con soporte OpenMP (`-O3 -march=native -fopenmp`).
   3. Ejecutar la suite completa de benchmarks para este equipo.
-  4. Generar el reporte complementario `INFORME_EXPERIMENTOS_COMPUTADOR_2.md` y `INFORME_EXPERIMENTOS_COMPUTADOR_2.pdf`.
+  4. Generar el reporte complementario `resultados/computador_2/INFORME_EXPERIMENTOS_COMPUTADOR_2.md` y su PDF.
   5. Contrastar los resultados con el Computador 1 para responder el **Apartado (g)** de la rúbrica.
 
 ---
 
-## 2. Estructura de Archivos del Proyecto
+## 2. Estructura Organizada de Archivos
 
 ```text
-├── tarea02.pdf                     # Enunciado y rúbrica oficial de la tarea
-├── requirements.txt                # Dependencias de Python (numpy, matplotlib, numba, markdown)
-├── .gitignore                      # Exclusión de binarios y temporales
-├── README.md                       # Guía general de uso para humanos
-├── AGENTS.md                       # Este archivo (guía para agentes IA)
+├── README.md                           # Guía general de uso
+├── AGENTS.md                           # Este archivo (guía para agentes IA)
+├── requirements.txt                    # Dependencias de Python
+├── ejecutar.py                         # Acceso directo para correr la suite
+├── .gitignore                          # Exclusiones de Git
 │
-├── serial.cpp                      # Referencia serial base y partición por bloques (Algoritmos 1 y 2)
-├── paralelo_b.cpp                  # Algoritmo 1: OpenMP Paralelismo de datos (#pragma omp parallel for)
-├── paralelo_c.cpp                  # Algoritmo 2: OpenMP Dividir y Conquistar (#pragma omp task por cuadrantes)
-├── paralelo_d_numba.py             # Algoritmo 3: Python con Numba (@njit(parallel=True) + prange)
+├── docs/                               # Documentación y pauta oficial
+│   └── tarea02.pdf                     # Enunciado oficial de la tarea
 │
-├── ejecutar_experimentos.py        # ORQUESTADOR PRINCIPAL: compila, mide y genera el informe
-├── convertir_informe_a_pdf.py      # Compilador de Markdown a PDF estático autocontenido
+├── src/                                # Códigos fuente C++ y Python
+│   ├── serial.cpp                      # Referencia serial base y partición por bloques
+│   ├── paralelo_b.cpp                  # Algoritmo 1: OpenMP Paralelismo de datos (filas)
+│   ├── paralelo_c.cpp                  # Algoritmo 2: OpenMP Dividir y Conquistar (tareas)
+│   ├── paralelo_c_cuadrantes.cpp       # Variante cuadrantes
+│   └── paralelo_d_numba.py             # Algoritmo 3: Python con Numba
 │
-├── resultados_computador_1.json    # Datos brutos medidos en el Computador 1 (Apple A18 Pro)
-├── INFORME_EXPERIMENTOS.md         # Informe completo de resultados del Computador 1
-└── INFORME_EXPERIMENTOS.pdf        # PDF de 12 páginas listo para entrega del Computador 1
+├── scripts/                            # Herramientas de automatización y benchmarking
+│   ├── ejecutar_experimentos.py        # Orquestador universal de experimentos
+│   ├── convertir_informe_a_pdf.py      # Compilador de Markdown a PDF con soporte KaTeX
+│   ├── graficos_apartado_e.py          # Generador de gráficos de escalamiento (Apartado e)
+│   └── apartado_f_escalabilidad_debil.py # Análisis de escalabilidad débil (Apartado f)
+│
+└── resultados/                         # Informes, datos brutos y gráficos generados
+    ├── computador_1/                   # Resultados del Computador 1 (Apple A18 Pro)
+    │   ├── INFORME_EXPERIMENTOS.md     # Informe completo en Markdown
+    │   ├── INFORME_EXPERIMENTOS.pdf    # PDF estático de 12 páginas listo para entrega
+    │   ├── INFORME_EXPERIMENTOS.html   # Reporte HTML interactivo autocontenido
+    │   ├── resultados_computador_1.json # Datos brutos en JSON
+    │   └── figuras/                    # Figuras en alta resolución (300 DPI)
+    └── computador_2/                   # Destino para mediciones del Computador 2
+        └── .gitkeep
 ```
 
 ---
@@ -51,7 +65,6 @@ La tarea estudia la multiplicación de matrices densas $C = A \cdot B$ de tamañ
 Cuando un usuario te pida ejecutar o complementar los experimentos en su máquina (Computador 2), sigue estos pasos exactos:
 
 ### Paso 1: Instalar Dependencias de Python
-Ejecuta en la terminal:
 ```bash
 pip install -r requirements.txt
 ```
@@ -68,12 +81,12 @@ pip install -r requirements.txt
 - **En Windows:** Asegurar `g++` con soporte OpenMP (vía MinGW-w64 / MSYS2).
 
 ### Paso 3: Ejecutar la Suite Completa en el Computador 2
-Ejecuta el orquestador especificando el Computador 2:
+Desde la raíz del repositorio:
 ```bash
-python3 ejecutar_experimentos.py --computador 2 --pdf
+python3 ejecutar.py --computador 2 --pdf
 ```
 *Parámetros útiles:*
-- `--computador 2`: Guarda los resultados en `resultados_computador_2.json` e `INFORME_EXPERIMENTOS_COMPUTADOR_2.md`.
+- `--computador 2`: Guarda los resultados en `resultados/computador_2/` e `INFORME_EXPERIMENTOS_COMPUTADOR_2.md`.
 - `--reps 5`: Número de repeticiones estadísticas por punto de medición (por defecto: 5).
 - `--pdf`: Compila automáticamente el informe generado a PDF estático vía Chrome headless.
 
@@ -88,7 +101,7 @@ python3 ejecutar_experimentos.py --computador 2 --pdf
 
 ## 4. Guía para el Análisis del Apartado (g) (Comparativa entre Equipos)
 
-El informe generado incluirá automáticamente la tabla comparativa con el Computador 1. Al redactar el análisis para el usuario, enfócate en estos tres ejes fundamentales de HPC:
+El informe generado en `resultados/computador_2/` incluirá automáticamente la tabla comparativa con el Computador 1. Al redactar el análisis para el usuario, enfócate en estos tres ejes fundamentales de HPC:
 
 1. **Topología y Homogeneidad de Núcleos:**
    - *Computador 1 (Apple A18 Pro):* Arquitectura asimétrica big.LITTLE (2 núcleos Performance @ 4.05 GHz + 4 núcleos Efficiency @ 2.42 GHz). Con $p=1$ y $p=2$, corre a máxima frecuencia; con $p \ge 4$, los hilos en núcleos lentos rezagan la sincronización en las barreras OpenMP.

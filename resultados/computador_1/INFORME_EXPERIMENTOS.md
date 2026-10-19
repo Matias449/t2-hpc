@@ -36,7 +36,7 @@ Se registraron 5 repeticiones por cada configuración tras calentar el sistema p
 | **1024** | 1 | 4 | **1473.68** | ± 5.19 | `172.331627` | 1.91x |
 | **2048** | 0 | 1 | **1522.75** | ± 232.65 | `172.331627` | 1.85x |
 
-![Figura 1: Tiempo Serial vs Tamaño de Bloque](figura_1_apartado_a_bloques.png)
+![Figura 1: Tiempo Serial vs Tamaño de Bloque](figuras/figura_1_apartado_a_bloques.png)
 
 ### Análisis y Discusión del Apartado (a):
 1. **Comportamiento del problema base ($n = 2048$):**
@@ -154,11 +154,11 @@ En Computación de Alto Rendimiento coexisten dos métricas formales:
 |  | 4 | 772.41 | ± 19.27 | 2.09x | 52.2% | 1.97x | 49.3% |
 |  | 8 | 672.34 | ± 37.62 | 2.40x | 30.0% | 2.26x | 28.3% |
 
-![Figura 2: Comparación T(p), Speedup y Eficiencia](figura_2_apartados_b_c_d_tiempos.png)
+![Figura 2: Comparación T(p), Speedup y Eficiencia](figuras/figura_2_apartados_b_c_d_tiempos.png)
 
-![Figura 3: Speedup y Eficiencia Absoluta vs Serial Óptimo](figura_3_apartado_e_comparacion_speedup_eficiencia.png)
+![Figura 3: Speedup y Eficiencia Absoluta vs Serial Óptimo](figuras/figura_3_apartado_e_comparacion_speedup_eficiencia.png)
 
-![Figura 4: Impacto del Tamaño de Bloque n en Algoritmo 2](figura_4_apartado_e_bloques_alg2_vs_serial.png)
+![Figura 4: Impacto del Tamaño de Bloque n en Algoritmo 2](figuras/figura_4_apartado_e_bloques_alg2_vs_serial.png)
 
 ---
 
@@ -191,7 +191,7 @@ Para estudiar la escalabilidad débil, se evaluaron los tres algoritmos con tama
 - **Algoritmo 2 (OpenMP Div&Conq, n=64):** $\mathcal{E}_{débil}^{iso} = \frac{273.61}{797.90} = \mathbf{34.3\%}$
 - **Algoritmo 3 (Python Numba):** $\mathcal{E}_{débil}^{iso} = \frac{213.97}{672.34} = \mathbf{31.8\%}$
 
-![Figura 5: Eficiencia Débil vs Tamaño de Problema](figura_5_apartado_f_escalabilidad_debil.png)
+![Figura 5: Eficiencia Débil vs Tamaño de Problema](figuras/figura_5_apartado_f_escalabilidad_debil.png)
 
 ### Discusión de la pregunta: *¿Se mantiene el desempeño paralelo al aumentar $N$?*
 - **Sí, e incluso aumenta la eficiencia paralela relativa:**

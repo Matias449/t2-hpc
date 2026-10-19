@@ -3,15 +3,15 @@
 *Pontificia Universidad Católica de Chile*
 
 Repositorio automatizado y reproducible para el desarrollo experimental de la Tarea 2. Compara el rendimiento, escalabilidad fuerte/débil y eficiencia de tres algoritmos de multiplicación densa de matrices $C = A \cdot B$ de tamaño $N \times N$:
-1. **Algoritmo 1 (C++ con OpenMP):** Paralelismo de datos por filas (`paralelo_b.cpp`).
-2. **Algoritmo 2 (C++ con OpenMP):** Dividir y conquistar recursivo por cuadrantes (`paralelo_c.cpp`).
-3. **Algoritmo 3 (Python con Numba):** Paralelismo de datos compilado JIT nativo (`paralelo_d_numba.py`).
+1. **Algoritmo 1 (C++ con OpenMP):** Paralelismo de datos por filas (`src/paralelo_b.cpp`).
+2. **Algoritmo 2 (C++ con OpenMP):** Dividir y conquistar recursivo por cuadrantes (`src/paralelo_c.cpp`).
+3. **Algoritmo 3 (Python con Numba):** Paralelismo de datos compilado JIT nativo (`src/paralelo_d_numba.py`).
 
 ---
 
 ## 🚀 Inicio Rápido (Quickstart para Compañeros de Grupo)
 
-Si acabas de clonar este repositorio en tu computador (**Computador 2**), sigue estos pasos:
+Si acabas de clonar este repositorio en tu computador (**Computador 2**), sigue estos sencillos pasos:
 
 ### 1. Instalar dependencias de Python
 ```bash
@@ -27,19 +27,23 @@ pip install -r requirements.txt
   ```bash
   brew install libomp
   ```
+- **En Windows:** Asegurar `g++` con soporte OpenMP (MinGW-w64).
 
 ### 3. Ejecutar todos los experimentos automáticamente
+Desde la raíz del repositorio, ejecuta:
 ```bash
-python3 ejecutar_experimentos.py --computador 2 --pdf
+python3 ejecutar.py --computador 2 --pdf
 ```
-Este comando único se encarga de:
-- Detectar automáticamente los núcleos, frecuencia, RAM y arquitectura de tu procesador.
-- Compilar los códigos fuente C++ con optimizaciones máximas (`-O3 -march=native -fopenmp`).
-- Ejecutar en orden todos los apartados (a, b, c, d, e, f, g).
-- Validar la consistencia matemática de los resultados (*checksum* `172.331627`).
-- Generar tu informe en Markdown: `INFORME_EXPERIMENTOS_COMPUTADOR_2.md`.
-- Generar la tabla comparativa directa contra el Computador 1 (Apple A18 Pro).
-- Compilar el reporte final a un PDF estático listo para entrega.
+*(O también: `python3 scripts/ejecutar_experimentos.py --computador 2 --pdf`)*
+
+Este comando único se encarga automáticamente de:
+1. Detectar los núcleos, frecuencia, RAM y arquitectura de tu procesador.
+2. Compilar los códigos fuente C++ con optimizaciones máximas (`-O3 -march=native -fopenmp`).
+3. Ejecutar en orden todos los apartados (a, b, c, d, e, f, g).
+4. Validar la consistencia matemática de los resultados (*checksum* `172.331627`).
+5. Generar tus gráficos y tu informe en `resultados/computador_2/INFORME_EXPERIMENTOS_COMPUTADOR_2.md`.
+6. Contrastar tus resultados con el **Computador 1 (Apple A18 Pro)** para el **Apartado (g)**.
+7. Compilar tu informe a un PDF estático listo para entrega.
 
 ---
 
@@ -52,23 +56,43 @@ Si estás trabajando con un asistente o agente de IA en tu terminal o IDE, este 
 
 ## 📁 Estructura del Repositorio
 
-| Archivo | Descripción |
-| :--- | :--- |
-| **`tarea02.pdf`** | Enunciado oficial de la tarea y pauta de evaluación. |
-| **`requirements.txt`** | Dependencias de Python (`numpy`, `matplotlib`, `numba`, `markdown`). |
-| **`serial.cpp`** | Código de referencia secuencial base y partición por bloques. |
-| **`paralelo_b.cpp`** | Algoritmo 1: OpenMP Paralelismo de datos (`#pragma omp parallel for`). |
-| **`paralelo_c.cpp`** | Algoritmo 2: OpenMP Dividir y Conquistar (`#pragma omp task` por cuadrantes). |
-| **`paralelo_d_numba.py`** | Algoritmo 3: Python con Numba (`@njit(parallel=True)` + `prange`). |
-| **`ejecutar_experimentos.py`** | **Orquestador principal:** compila, mide repeticiones y genera los informes. |
-| **`convertir_informe_a_pdf.py`** | Compilador de Markdown a PDF estático con soporte KaTeX para fórmulas. |
-| **`INFORME_EXPERIMENTOS.md`** | Informe completo de resultados medidos en el **Computador 1 (Apple A18 Pro)**. |
-| **`INFORME_EXPERIMENTOS.pdf`** | PDF de 12 páginas listo para entrega con resultados del **Computador 1**. |
-| **`resultados_computador_1.json`** | Datos experimentales brutos del Computador 1 para contrastar en Apartado (g). |
+```text
+├── README.md                           # Guía general de uso
+├── AGENTS.md                           # Instrucciones para agentes IA (Codex / Claude)
+├── requirements.txt                    # Dependencias de Python
+├── ejecutar.py                         # Acceso directo para correr experimentos
+├── .gitignore                          # Exclusiones de Git
+│
+├── docs/                               # Documentación y enunciado oficial
+│   └── tarea02.pdf                     # Pauta oficial de la Tarea 2
+│
+├── src/                                # Códigos fuente C++ y Python
+│   ├── serial.cpp                      # Referencia serial base y por bloques
+│   ├── paralelo_b.cpp                  # Algoritmo 1: OpenMP Paralelismo de datos (filas)
+│   ├── paralelo_c.cpp                  # Algoritmo 2: OpenMP Dividir y Conquistar (tareas)
+│   ├── paralelo_c_cuadrantes.cpp       # Variante cuadrantes
+│   └── paralelo_d_numba.py             # Algoritmo 3: Python con Numba (@njit + prange)
+│
+├── scripts/                            # Scripts de automatización y benchmarking
+│   ├── ejecutar_experimentos.py        # Orquestador universal de benchmarks
+│   ├── convertir_informe_a_pdf.py      # Compilador de Markdown a PDF con soporte KaTeX
+│   ├── graficos_apartado_e.py          # Generador de gráficos de escalamiento (Apartado e)
+│   └── apartado_f_escalabilidad_debil.py # Análisis de escalabilidad débil (Apartado f)
+│
+└── resultados/                         # Informes, datos brutos y gráficos generados
+    ├── computador_1/                   # Resultados del Computador 1 (Apple A18 Pro)
+    │   ├── INFORME_EXPERIMENTOS.md     # Informe completo en Markdown
+    │   ├── INFORME_EXPERIMENTOS.pdf    # PDF estático de 12 páginas listo para entrega
+    │   ├── INFORME_EXPERIMENTOS.html   # Reporte HTML interactivo autocontenido
+    │   ├── resultados_computador_1.json # Datos brutos en JSON
+    │   └── figuras/                    # Figuras en alta resolución (300 DPI)
+    └── computador_2/                   # Destino para mediciones del Computador 2
+        └── .gitkeep
+```
 
 ---
 
-## 📊 Apartados Evaluados en la Pauta
+## 📊 Resumen de Apartados Evaluados
 
 - **(a) Base serial y tamaño de bloque:** $N = 2048$, $n \in \{2048, 1024, 512, 256, 128, 64, 32\}$.
 - **(b) Algoritmo 1:** OpenMP paralelismo de datos con $p \in \{1, 2, 4, 8\}$ hilos.

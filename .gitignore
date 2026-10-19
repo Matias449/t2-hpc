@@ -1,4 +1,5 @@
-# Binarios ejecutables de C++
+# Binarios ejecutables y carpeta de compilacion
+build/
 serial
 paralelo_b
 paralelo_c

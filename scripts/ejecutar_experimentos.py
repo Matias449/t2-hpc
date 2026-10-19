@@ -11,16 +11,16 @@ Ejecuta de manera reproducible y automatizada:
   - Apartado (b): paralelo_b.cpp (Algoritmo 1 - OpenMP) con N=2048, p in {1, 2, 4, 8}
   - Apartado (c): paralelo_c.cpp (Algoritmo 2 - OpenMP) con N=2048, p in {1, 2, 4, 8} (n=64)
                   y variacion de n in {32, 64, 128, 256, 512, 1024, 2048} con p=4
-  - Apartado (d): Algoritmo 3 en Python con Numba (warm-up incluido) para p in {1, 2, 4, 8}
+  - Apartado (d): Algoritmo 3 en Python con Numba (@njit(parallel=True) + prange)
   - Apartado (e): Generacion de tablas y graficos de T(p), Speedup y Eficiencia
   - Apartado (f): Escalabilidad debil para N in {1024, 2048, 4096} en los tres algoritmos
-  - Apartado (g): Deteccion automatica del hardware local y comparativa con el Computador 1
+  - Apartado (g): Deteccion automatica del hardware local y comparativa con Computador 1
 
 Uso:
-  python3 ejecutar_experimentos.py                # Modo normal (detecta PC y corre la suite)
-  python3 ejecutar_experimentos.py --computador 2 # Fuerza identificador como Computador 2
-  python3 ejecutar_experimentos.py --reps 3        # Modifica repeticiones por punto (default: 5)
-  python3 ejecutar_experimentos.py --pdf           # Compila automaticamente a PDF al finalizar
+  python3 scripts/ejecutar_experimentos.py                # Modo normal (detecta PC y corre la suite)
+  python3 scripts/ejecutar_experimentos.py --computador 2 # Fuerza identificador como Computador 2
+  python3 scripts/ejecutar_experimentos.py --reps 3        # Modifica repeticiones por punto (default: 5)
+  python3 scripts/ejecutar_experimentos.py --pdf           # Compila automaticamente a PDF al finalizar
 ===============================================================================
 """
 
@@ -46,7 +46,11 @@ except ImportError:
     NUMBA_OK = False
     print("[!] Numba no detectado. Instala dependencias con: pip install -r requirements.txt")
 
-BASE_DIR = os.path.dirname(os.path.abspath(__file__))
+SCRIPT_DIR = os.path.dirname(os.path.abspath(__file__))
+REPO_ROOT = os.path.abspath(os.path.join(SCRIPT_DIR, ".."))
+SRC_DIR = os.path.join(REPO_ROOT, "src")
+BUILD_DIR = os.path.join(REPO_ROOT, "build")
+RESULTADOS_DIR = os.path.join(REPO_ROOT, "resultados")
 
 # -----------------------------------------------------------------------------
 # Deteccion de Hardware y Sistema Operativo
@@ -125,20 +129,21 @@ def detectar_hardware():
 def compilar_binarios(hw_info):
     print("=" * 80)
     print("PASO 0: Compilacion de binarios C++ con soporte OpenMP")
+    print(f"Ruta de fuentes: {SRC_DIR}")
+    print(f"Ruta de binarios: {BUILD_DIR}")
     print("=" * 80)
 
+    os.makedirs(BUILD_DIR, exist_ok=True)
     sistema = platform.system()
     compiler = None
     flags = ["-O3"]
 
-    # Intentar detectar compilador adecuado
     if shutil.which("g++"):
         compiler = "g++"
         flags = ["-O3", "-march=native", "-fopenmp"]
     elif shutil.which("clang++"):
         compiler = "clang++"
         if sistema == "Darwin":
-            # Buscar libomp via brew
             brew_libomp = None
             for p in ["/opt/homebrew/opt/libomp", "/usr/local/opt/libomp"]:
                 if os.path.exists(p):
@@ -167,28 +172,31 @@ def compilar_binarios(hw_info):
 
     programas = ["serial.cpp", "paralelo_b.cpp", "paralelo_c.cpp"]
     for prog in programas:
+        src_path = os.path.join(SRC_DIR, prog)
         out_name = prog.replace(".cpp", "")
-        cmd = [compiler] + flags + [prog, "-o", out_name]
-        print(f"Compilando {prog} -> {out_name} ...")
-        res = subprocess.run(cmd, cwd=BASE_DIR, capture_output=True, text=True)
+        out_path = os.path.join(BUILD_DIR, out_name)
+        cmd = [compiler] + flags + [src_path, "-o", out_path]
+        print(f"Compilando {prog} -> build/{out_name} ...")
+        res = subprocess.run(cmd, capture_output=True, text=True)
         if res.returncode != 0:
-            # Reintentar sin -march=native si fallo (ej. arquitecturas virtuales)
             if "-march=native" in flags:
                 flags_fallback = [f for f in flags if f != "-march=native"]
-                cmd = [compiler] + flags_fallback + [prog, "-o", out_name]
+                cmd = [compiler] + flags_fallback + [src_path, "-o", out_path]
                 print(f"  Reintentando sin -march=native: {' '.join(cmd)}")
-                res = subprocess.run(cmd, cwd=BASE_DIR, capture_output=True, text=True)
+                res = subprocess.run(cmd, capture_output=True, text=True)
             if res.returncode != 0:
                 print(f"ERROR al compilar {prog}:\n{res.stderr}")
                 sys.exit(1)
 
-    print(">>> Todos los ejecutables C++ compilados exitosamente.\n")
+    print(">>> Todos los ejecutables C++ compilados exitosamente en build/\n")
 
-def ejecutar_cpp(cmd_args):
-    """Ejecuta un comando binario local y devuelve tiempo en ms y checksum."""
-    res = subprocess.run(cmd_args, cwd=BASE_DIR, capture_output=True, text=True)
+def ejecutar_cpp(prog_name, *args):
+    """Ejecuta un binario desde build/ y devuelve tiempo en ms y checksum."""
+    bin_path = os.path.join(BUILD_DIR, prog_name)
+    cmd = [bin_path] + [str(a) for a in args]
+    res = subprocess.run(cmd, capture_output=True, text=True)
     if res.returncode != 0:
-        raise RuntimeError(f"Error al ejecutar {' '.join(cmd_args)}:\n{res.stderr}")
+        raise RuntimeError(f"Error al ejecutar {' '.join(cmd)}:\n{res.stderr}")
     line = res.stdout.strip()
     ms = None
     chk = None
@@ -213,7 +221,7 @@ def correr_apartado_a(reps=5):
         tiempos = []
         chk = 0.0
         for r in range(reps):
-            ms, chk = ejecutar_cpp(["./serial", "2048", str(n)])
+            ms, chk = ejecutar_cpp("serial", 2048, n)
             tiempos.append(ms)
             print(f"  [serial] n={n:4d} | rep={r+1}/{reps} | tiempo={ms:8.2f} ms | chk={chk:.6f}")
         resultados[n] = {
@@ -237,7 +245,7 @@ def correr_apartado_b(reps=5):
         tiempos = []
         chk = 0.0
         for r in range(reps):
-            ms, chk = ejecutar_cpp(["./paralelo_b", "2048", str(p)])
+            ms, chk = ejecutar_cpp("paralelo_b", 2048, p)
             tiempos.append(ms)
             print(f"  [paralelo_b] p={p} | rep={r+1}/{reps} | tiempo={ms:8.2f} ms | chk={chk:.6f}")
         resultados[p] = {
@@ -261,7 +269,7 @@ def correr_apartado_c(reps=5):
         tiempos = []
         chk = 0.0
         for r in range(reps):
-            ms, chk = ejecutar_cpp(["./paralelo_c", "2048", "64", str(p)])
+            ms, chk = ejecutar_cpp("paralelo_c", 2048, 64, p)
             tiempos.append(ms)
             print(f"  [paralelo_c] n=64 | p={p} | rep={r+1}/{reps} | tiempo={ms:8.2f} ms | chk={chk:.6f}")
         res_p[p] = {
@@ -285,7 +293,7 @@ def correr_apartado_c(reps=5):
         tiempos = []
         chk = 0.0
         for r in range(reps):
-            ms, chk = ejecutar_cpp(["./paralelo_c", "2048", str(n), "4"])
+            ms, chk = ejecutar_cpp("paralelo_c", 2048, n, 4)
             tiempos.append(ms)
             print(f"  [paralelo_c] n={n:4d} | p=4 | rep={r+1}/{reps} | tiempo={ms:8.2f} ms")
         res_bloques[n] = {
@@ -376,32 +384,27 @@ def correr_apartado_f(res_b, res_c, res_d):
         "Algoritmo 3 (Python Numba)": {}
     }
 
-    # N=2048 ya fue medido
     datos_f["Algoritmo 1 (OpenMP Datos)"][2048] = [res_b[p]["mean_ms"] for p in threads]
     datos_f["Algoritmo 2 (OpenMP Div&Conq, n=64)"][2048] = [res_c[p]["mean_ms"] for p in threads]
     if res_d:
         datos_f["Algoritmo 3 (Python Numba)"][2048] = [res_d[p]["mean_ms"] for p in threads]
 
-    # Medir N=1024 y N=4096
     for N in [1024, 4096]:
         reps = 3 if N == 4096 else 5
         print(f"\n>>> Midiendo tamano N = {N} (reps = {reps}) ...")
 
-        # Algoritmo 1
         t_a1 = []
         for p in threads:
-            vals = [ejecutar_cpp(["./paralelo_b", str(N), str(p)])[0] for _ in range(reps)]
+            vals = [ejecutar_cpp("paralelo_b", N, p)[0] for _ in range(reps)]
             t_a1.append(round(float(np.mean(vals)), 2))
         datos_f["Algoritmo 1 (OpenMP Datos)"][N] = t_a1
 
-        # Algoritmo 2
         t_a2 = []
         for p in threads:
-            vals = [ejecutar_cpp(["./paralelo_c", str(N), "64", str(p)])[0] for _ in range(reps)]
+            vals = [ejecutar_cpp("paralelo_c", N, 64, p)[0] for _ in range(reps)]
             t_a2.append(round(float(np.mean(vals)), 2))
         datos_f["Algoritmo 2 (OpenMP Div&Conq, n=64)"][N] = t_a2
 
-        # Algoritmo 3 (Numba)
         if NUMBA_OK:
             @njit
             def init_mat(N, offset):
@@ -437,23 +440,116 @@ def correr_apartado_f(res_b, res_c, res_d):
     return datos_f
 
 # -----------------------------------------------------------------------------
-# Generacion de Reporte Markdown y Comparativa
+# Generacion de Figuras y Reporte
 # -----------------------------------------------------------------------------
-def generar_reporte_md(num_pc, hw_info, res_a, res_b, res_c, res_c_bloques, res_d, datos_f):
-    suffix = f"_COMPUTADOR_{num_pc}" if num_pc > 1 else ""
-    nombre_md = f"INFORME_EXPERIMENTOS{suffix}.md"
-    target_path = os.path.join(BASE_DIR, nombre_md)
+def generar_figuras_y_reporte(num_pc, hw_info, res_a, res_b, res_c, res_c_bloques, res_d, datos_f):
+    folder_dest = os.path.join(RESULTADOS_DIR, f"computador_{num_pc}")
+    fig_dir = os.path.join(folder_dest, "figuras")
+    os.makedirs(fig_dir, exist_ok=True)
 
     threads = [1, 2, 4, 8]
+    p_arr = np.array(threads, dtype=float)
     t_ser_opt = res_a[2048]["mean_ms"]
     t1_b = res_b[1]["mean_ms"]
     t1_c = res_c[1]["mean_ms"]
     t1_d = res_d[1]["mean_ms"] if res_d else 0.0
 
-    # Cargar datos de Computador 1 si estamos en Computador 2
+    print("=" * 80)
+    print(f"GENERANDO FIGURAS EN: {fig_dir}")
+    print("=" * 80)
+
+    # 1. Figura 1: Apartado (a)
+    fig, ax = plt.subplots(figsize=(8, 4.8), dpi=300)
+    bloques = [32, 64, 128, 256, 512, 1024, 2048]
+    t_bloques = [res_a[n]["mean_ms"] for n in bloques]
+    s_bloques = [res_a[n]["std_ms"] for n in bloques]
+    ax.errorbar([str(n) for n in bloques], t_bloques, yerr=s_bloques, fmt="-o", color="#1f77b4", linewidth=2, markersize=7, capsize=4)
+    ax.set_title(f"Apartado (a): Tiempo Serial vs. Bloque n (Computador {num_pc})")
+    ax.set_xlabel("Tamaño de bloque n")
+    ax.set_ylabel("Tiempo de ejecución (ms)")
+    ax.grid(True, linestyle=":", alpha=0.7)
+    fig.tight_layout()
+    fig1_path = os.path.join(fig_dir, "figura_1_apartado_a_bloques.png")
+    fig.savefig(fig1_path, dpi=300)
+    plt.close(fig)
+
+    # 2. Figura 2: Panel Triple T(p), S(p), E(p)
+    fig, axes = plt.subplots(1, 3, figsize=(16, 5.0), dpi=300)
+    t_b = [res_b[p]["mean_ms"] for p in threads]
+    t_c = [res_c[p]["mean_ms"] for p in threads]
+
+    # T(p)
+    axes[0].plot(p_arr, t_ser_opt / p_arr, "--", color="#444444", label="Ideal")
+    axes[0].plot(p_arr, t_b, "-o", color="#1f77b4", label="Alg. 1 (OpenMP Datos)")
+    axes[0].plot(p_arr, t_c, "-s", color="#d95f02", label="Alg. 2 (Div&Conq, n=64)")
+    if res_d:
+        t_d = [res_d[p]["mean_ms"] for p in threads]
+        axes[0].plot(p_arr, t_d, "-^", color="#2ca02c", label="Alg. 3 (Numba)")
+    axes[0].set_title("Tiempo $T(p)$ vs Threads")
+    axes[0].set_xlabel("Threads (p)")
+    axes[0].set_ylabel("Tiempo (ms)")
+    axes[0].grid(True, linestyle=":", alpha=0.7)
+    axes[0].legend()
+
+    # S(p)
+    axes[1].plot(p_arr, p_arr, "--", color="#444444", label="Ideal (p)")
+    axes[1].plot(p_arr, t1_b / np.array(t_b), "-o", color="#1f77b4", label="Alg. 1")
+    axes[1].plot(p_arr, t1_c / np.array(t_c), "-s", color="#d95f02", label="Alg. 2")
+    if res_d:
+        axes[1].plot(p_arr, t1_d / np.array(t_d), "-^", color="#2ca02c", label="Alg. 3")
+    axes[1].set_title("Speedup Relativo $S(p)$")
+    axes[1].set_xlabel("Threads (p)")
+    axes[1].grid(True, linestyle=":", alpha=0.7)
+    axes[1].legend()
+
+    # E(p)
+    axes[2].axhline(100.0, linestyle="--", color="#444444", label="Ideal (100%)")
+    axes[2].plot(p_arr, ((t1_b / np.array(t_b)) / p_arr) * 100.0, "-o", color="#1f77b4", label="Alg. 1")
+    axes[2].plot(p_arr, ((t1_c / np.array(t_c)) / p_arr) * 100.0, "-s", color="#d95f02", label="Alg. 2")
+    if res_d:
+        axes[2].plot(p_arr, ((t1_d / np.array(t_d)) / p_arr) * 100.0, "-^", color="#2ca02c", label="Alg. 3")
+    axes[2].set_title("Eficiencia Relativa $E(p)$ (%)")
+    axes[2].set_xlabel("Threads (p)")
+    axes[2].set_ylim(0, 115)
+    axes[2].grid(True, linestyle=":", alpha=0.7)
+    axes[2].legend()
+
+    fig.tight_layout()
+    fig2_path = os.path.join(fig_dir, "figura_2_apartados_b_c_d_tiempos.png")
+    fig.savefig(fig2_path, dpi=300)
+    plt.close(fig)
+
+    # 3. Figura 5: Escalabilidad debil
+    fig, axes = plt.subplots(1, 3, figsize=(16, 4.8), dpi=300, sharey=True)
+    algs_f = list(datos_f.keys())
+    for idx, alg_n in enumerate(algs_f):
+        ax = axes[idx]
+        ax.axhline(100.0, linestyle="--", color="#444", label="Ideal")
+        for N in [1024, 2048, 4096]:
+            arr = np.array(datos_f[alg_n][N], dtype=float)
+            s_arr = arr[0] / arr
+            e_arr = (s_arr / p_arr) * 100.0
+            ax.plot(p_arr, e_arr, "-o", label=f"N={N}")
+        ax.set_title(alg_n.split("(")[0].strip())
+        ax.set_xlabel("Threads (p)")
+        if idx == 0:
+            ax.set_ylabel("Eficiencia E(N, p) (%)")
+        ax.set_ylim(0, 115)
+        ax.grid(True, linestyle=":", alpha=0.7)
+        ax.legend()
+    fig.tight_layout()
+    fig5_path = os.path.join(fig_dir, "figura_5_apartado_f_escalabilidad_debil.png")
+    fig.savefig(fig5_path, dpi=300)
+    plt.close(fig)
+
+    # Generar Markdown
+    nombre_md = f"INFORME_EXPERIMENTOS_COMPUTADOR_{num_pc}.md" if num_pc > 1 else "INFORME_EXPERIMENTOS.md"
+    md_path = os.path.join(folder_dest, nombre_md)
+
+    # Cargar datos de Computador 1 si existe
+    c1_path = os.path.join(RESULTADOS_DIR, "computador_1", "resultados_computador_1.json")
     c1_data = None
-    c1_path = os.path.join(BASE_DIR, "resultados_computador_1.json")
-    if os.path.exists(c1_path):
+    if os.path.exists(c1_path) and num_pc != 1:
         try:
             with open(c1_path, "r", encoding="utf-8") as f:
                 c1_data = json.load(f)
@@ -470,14 +566,15 @@ def generar_reporte_md(num_pc, hw_info, res_a, res_b, res_c, res_c_bloques, res_
 
     md.append("---\n## Resumen de Resultados por Apartado\n")
 
-    # Tabla Apartado A
+    # Apartado (a)
     md.append("### (a) Base Serial y Tamaño de Bloque ($N = 2048$)")
     md.append("| Tamaño bloque $n$ | $T(n)$ [ms] | Desv. Est. [ms] | Checksum |")
     md.append("| :---: | :---: | :---: | :---: |")
     for n in [32, 64, 128, 256, 512, 1024, 2048]:
         md.append(f"| **{n}** | **{res_a[n]['mean_ms']:.2f}** | ± {res_a[n]['std_ms']:.2f} | `{res_a[n]['checksum']:.6f}` |")
+    md.append("\n![Figura 1: Tiempo Serial vs Bloque n](figuras/figura_1_apartado_a_bloques.png)\n")
 
-    # Tabla Comparativa de Algoritmos
+    # Comparativa Algoritmos
     md.append("\n### (b, c, d, e) Comparación de Algoritmos Paralelos ($N = 2048$)")
     md.append("| Algoritmo | $p$ | $T(p)$ [ms] | Speedup Relativo $S(p)$ | Eficiencia $E(p)$ | Speedup Absoluto (vs Serial) |")
     md.append("| :--- | :---: | :---: | :---: | :---: | :---: |")
@@ -498,6 +595,8 @@ def generar_reporte_md(num_pc, hw_info, res_a, res_b, res_c, res_c_bloques, res_
             nom_col = f"**{nombre}**" if idx == 0 else ""
             md.append(f"| {nom_col} | {p} | {m:.2f} | {s_rel:.2f}x | {e_rel:.1f}% | {s_abs:.2f}x |")
 
+    md.append("\n![Figura 2: Comparación T(p), Speedup y Eficiencia](figuras/figura_2_apartados_b_c_d_tiempos.png)\n")
+
     # Escalabilidad debil
     md.append("\n### (f) Escalabilidad Débil para $N \\in \\{1024, 2048, 4096\\}$")
     md.append("| Algoritmo | $N$ | $p=1$ [ms] | $p=2$ [ms] | $p=4$ [ms] | $p=8$ [ms] | Speedup $S(N, 8)$ | Eficiencia $E(N, 8)$ |")
@@ -509,7 +608,9 @@ def generar_reporte_md(num_pc, hw_info, res_a, res_b, res_c, res_c_bloques, res_
             ef8 = (sp8 / 8.0) * 100.0
             md.append(f"| **{alg_nom}** | {N} | {row[0]:.2f} | {row[1]:.2f} | {row[2]:.2f} | {row[3]:.2f} | **{sp8:.2f}x** | **{ef8:.1f}%** |")
 
-    # Comparativa con Computador 1 si existe
+    md.append("\n![Figura 5: Escalabilidad Débil](figuras/figura_5_apartado_f_escalabilidad_debil.png)\n")
+
+    # Comparativa Apartado (g) si existe Computador 1
     if c1_data:
         c1_hw = c1_data.get("hardware", {})
         c1_ser = c1_data.get("apartado_a", {}).get("2048", {}).get("mean_ms", 1522.75)
@@ -527,10 +628,11 @@ def generar_reporte_md(num_pc, hw_info, res_a, res_b, res_c, res_c_bloques, res_
         md.append(f"| **$T_{{alg1}}(p=4)$** | **{c1_b4:.2f} ms** | **{res_b[4]['mean_ms']:.2f} ms** |")
         md.append(f"| **$T_{{alg2}}(p=4, n=64)$** | **{c1_c4:.2f} ms** | **{res_c[4]['mean_ms']:.2f} ms** |")
 
-    with open(target_path, "w", encoding="utf-8") as f:
+    with open(md_path, "w", encoding="utf-8") as f:
         f.write("\n".join(md))
 
-    print(f"\n>>> INFORME MARKDOWN GENERADO CON EXITO: {target_path}")
+    print(f"\n>>> INFORME MARKDOWN GENERADO: {md_path}")
+    return md_path
 
 # -----------------------------------------------------------------------------
 # MAIN
@@ -544,10 +646,10 @@ def main():
 
     hw_info = detectar_hardware()
 
-    # Auto-deteccion del computador
+    c1_json = os.path.join(RESULTADOS_DIR, "computador_1", "resultados_computador_1.json")
     num_pc = args.computador
     if num_pc == 0:
-        if os.path.exists(os.path.join(BASE_DIR, "resultados_computador_1.json")) and hw_info["cpu_brand"] != "Apple A18 Pro":
+        if os.path.exists(c1_json) and hw_info["cpu_brand"] != "Apple A18 Pro":
             num_pc = 2
             print(f"[i] Se detecto 'resultados_computador_1.json'. Asignando este equipo como Computador 2.")
         else:
@@ -565,7 +667,10 @@ def main():
     res_d = correr_apartado_d(reps=args.reps)
     datos_f = correr_apartado_f(res_b, res_c, res_d)
 
-    # Guardar JSON
+    # Guardar JSON en la carpeta correspondiente
+    folder_dest = os.path.join(RESULTADOS_DIR, f"computador_{num_pc}")
+    os.makedirs(folder_dest, exist_ok=True)
+    json_path = os.path.join(folder_dest, f"resultados_computador_{num_pc}.json")
     datos_guardar = {
         "computador_id": num_pc,
         "hardware": hw_info,
@@ -576,18 +681,16 @@ def main():
         "apartado_d": res_d,
         "apartado_f": datos_f,
     }
-    json_name = f"resultados_computador_{num_pc}.json"
-    with open(os.path.join(BASE_DIR, json_name), "w", encoding="utf-8") as f:
+    with open(json_path, "w", encoding="utf-8") as f:
         json.dump(datos_guardar, f, indent=2)
-    print(f"\n>>> Datos brutos JSON guardados en: {json_name}")
+    print(f"\n>>> Datos brutos JSON guardados en: {json_path}")
 
-    generar_reporte_md(num_pc, hw_info, res_a, res_b, res_c, res_c_bloques, res_d, datos_f)
+    md_path = generar_figuras_y_reporte(num_pc, hw_info, res_a, res_b, res_c, res_c_bloques, res_d, datos_f)
 
     if args.pdf:
         try:
             import convertir_informe_a_pdf
-            convertir_informe_a_pdf.generar_html()
-            convertir_informe_a_pdf.generar_pdf()
+            convertir_informe_a_pdf.convertir_md_a_pdf(md_path)
         except Exception as e:
             print(f"[!] No se pudo compilar PDF automaticamente: {e}")
 
